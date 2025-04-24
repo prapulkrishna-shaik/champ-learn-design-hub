@@ -1,3 +1,4 @@
+
 import React from 'react';
 import {
   Carousel,
@@ -33,6 +34,11 @@ const slides = [
     image: "photo-1519389950473-47ba0277781c",
     title: "Group Sessions",
     description: "Collaborative learning opportunities"
+  },
+  {
+    image: "photo-1488590528505-98d2b5aba04b",
+    title: "Tech-Enabled Learning",
+    description: "Cutting-edge digital learning tools"
   }
 ];
 
@@ -52,16 +58,16 @@ const WorkShowcase = () => {
             <CarouselContent>
               {slides.map((slide, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="card h-full flex flex-col">
-                    <div className="relative aspect-video overflow-hidden rounded-t-xl">
+                  <div className="card h-full flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl overflow-hidden">
+                    <div className="relative aspect-video overflow-hidden">
                       <img
                         src={`https://source.unsplash.com/${slide.image}`}
                         alt={slide.title}
-                        className="object-cover w-full h-full"
+                        className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
                       />
                     </div>
-                    <div className="p-4">
-                      <h3 className="text-xl font-semibold mb-2">{slide.title}</h3>
+                    <div className="p-4 bg-white">
+                      <h3 className="text-xl font-semibold mb-2 text-gradechamp-blue">{slide.title}</h3>
                       <p className="text-gray-600">{slide.description}</p>
                     </div>
                   </div>
@@ -83,3 +89,4 @@ const WorkShowcase = () => {
 };
 
 export default WorkShowcase;
+
