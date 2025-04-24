@@ -7,6 +7,8 @@ import SubjectsSection from '@/components/SubjectsSection';
 import TutorsSection from '@/components/TutorsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import ContactButtons from '@/components/ContactButtons';
+import InterestForm from '@/components/InterestForm';
+import SchoolCollaborations from '@/components/SchoolCollaborations';
 import Footer from '@/components/Footer';
 
 const Index = () => {
@@ -17,8 +19,10 @@ const Index = () => {
         <Hero />
         <WhySection />
         <SubjectsSection />
+        <SchoolCollaborations />
         <TutorsSection />
         <TestimonialsSection />
+        <InterestForm />
         <ContactButtons />
       </main>
       <Footer />
