@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { School } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const schools = [
   {
@@ -27,16 +28,16 @@ const schools = [
 
 const SchoolCollaborations = () => {
   return (
-    <section className="section-padding bg-gradechamp-green/20">
+    <section className="section-padding bg-gradechamp-softpurple/10">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Partner Schools</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            We're proud to collaborate with leading educational institutions to provide quality tutoring services to their students.
+        <div className="text-center mb-8">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Partner Schools</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto mb-6">
+            GradeChamp partners with schools to bring personalized mentorship into classrooms.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {schools.map((school, index) => (
             <div 
               key={index}
@@ -52,6 +53,13 @@ const SchoolCollaborations = () => {
               <p className="text-gradechamp-blue text-sm text-center">{school.students}</p>
             </div>
           ))}
+        </div>
+        
+        <div className="mt-10 text-center">
+          <p className="text-gray-600 mb-4">Are you a school administrator interested in partnering with us?</p>
+          <Button variant="outline" className="border-2 border-gradechamp-blue rounded-full text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white transition-colors">
+            Let's Connect
+          </Button>
         </div>
       </div>
     </section>

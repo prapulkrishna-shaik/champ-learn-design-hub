@@ -1,5 +1,7 @@
 
 import React from 'react';
+import { Button } from "@/components/ui/button";
+import { School } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -71,21 +73,18 @@ const Footer = () => {
                 <a href="tel:+1-800-123-4567">+1-800-123-4567</a>
               </li>
             </ul>
-            <div className="mt-6">
-              <h5 className="text-gray-800 font-bold mb-2">Subscribe to our newsletter</h5>
-              <form className="flex">
-                <input
-                  type="email"
-                  placeholder="Your email"
-                  className="rounded-l-lg px-4 py-2 w-full focus:outline-none focus:ring-2 focus:ring-gradechamp-blue"
-                />
-                <button
-                  type="submit"
-                  className="bg-gradechamp-blue text-white rounded-r-lg px-4 py-2 font-medium hover:bg-gradechamp-lightblue transition-colors"
-                >
-                  Subscribe
-                </button>
-              </form>
+            
+            <div className="mt-6 bg-white p-4 rounded-lg shadow-sm">
+              <div className="flex items-center mb-2">
+                <School className="h-5 w-5 text-gradechamp-blue mr-2" />
+                <h5 className="text-gray-800 font-bold">For Schools</h5>
+              </div>
+              <p className="text-sm text-gray-600 mb-3">
+                GradeChamp partners with schools to bring personalized mentorship into classrooms.
+              </p>
+              <Button variant="outline" size="sm" className="w-full border border-gradechamp-blue text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white rounded-full transition-colors">
+                Let's Connect
+              </Button>
             </div>
           </div>
         </div>

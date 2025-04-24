@@ -7,40 +7,44 @@ const tutors = [
     name: "Emily Johnson",
     subjects: "Mathematics",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
-    bio: "Emily has a Master's in Mathematics Education and 5+ years of teaching experience.",
+    bio: "Emily believes in making math approachable through real-world examples. Her students say she turns math anxiety into math confidence.",
+    philosophy: "Learning happens when students feel safe to make mistakes.",
     rating: 4.9
   },
   {
     name: "David Chen",
     subjects: "Science",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
-    bio: "David holds a PhD in Physics and specializes in making complex concepts simple.",
+    bio: "David makes complex scientific concepts tangible through hands-on experiments and everyday examples.",
+    philosophy: "Curiosity is the foundation of all scientific discovery.",
     rating: 4.8
   },
   {
     name: "Sarah Williams",
     subjects: "English Literature",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
-    bio: "Sarah is a published author with a degree in English Literature from Oxford.",
+    bio: "Sarah helps students find their voice through writing and builds confidence in even the most reluctant readers.",
+    philosophy: "Every student has a unique voice waiting to be discovered.",
     rating: 4.9
   },
   {
     name: "Michael Rodriguez",
     subjects: "Computer Science",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
-    bio: "Michael is a software engineer who loves teaching coding to young minds.",
+    bio: "Michael transforms coding from intimidating to exciting by focusing on creative projects that students care about.",
+    philosophy: "Technology should be a tool for creativity, not just consumption.",
     rating: 4.7
   }
 ];
 
 const TutorsSection = () => {
   return (
-    <section id="tutors" className="section-padding bg-gradechamp-blue/5">
+    <section id="tutors" className="section-padding bg-gradechamp-green/30">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Tutors</h2>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Our tutors are not just academically brilliant but also passionate about teaching and mentoring young students.
+            Our tutors are not just subject experts but mentors who connect personally with students, understanding their unique learning needs.
           </p>
         </div>
         
@@ -62,14 +66,17 @@ const TutorsSection = () => {
                 <BookUser className="h-3 w-3 mr-1" />
                 {tutor.subjects}
               </div>
-              <p className="text-gray-600 text-sm">{tutor.bio}</p>
+              <p className="text-gray-600 text-sm mb-3">{tutor.bio}</p>
+              <div className="mt-auto pt-3 border-t border-gray-100 w-full">
+                <p className="text-sm italic text-gradechamp-blue">"{tutor.philosophy}"</p>
+              </div>
             </div>
           ))}
         </div>
         
         <div className="text-center mt-12">
           <p className="text-gray-600 mb-6">
-            All our tutors undergo rigorous vetting, background checks, and training before joining our platform.
+            All our tutors undergo rigorous selection, background checks, and training in both academic expertise and mentorship skills.
           </p>
           <a href="#" className="text-gradechamp-blue hover:underline font-medium inline-flex items-center">
             View All Tutors
