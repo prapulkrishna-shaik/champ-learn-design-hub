@@ -6,7 +6,7 @@ import WhySection from '@/components/WhySection';
 import SubjectsSection from '@/components/SubjectsSection';
 import TutorsSection from '@/components/TutorsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
-import ContactButtons from '@/components/ContactButtons';
+import WorkShowcase from '@/components/WorkShowcase';
 import InterestForm from '@/components/InterestForm';
 import SchoolCollaborations from '@/components/SchoolCollaborations';
 import Footer from '@/components/Footer';
@@ -21,9 +21,9 @@ const Index = () => {
         <SubjectsSection />
         <TutorsSection />
         <TestimonialsSection />
+        <WorkShowcase />
         <SchoolCollaborations />
         <InterestForm />
-        <ContactButtons />
       </main>
       <Footer />
     </div>
