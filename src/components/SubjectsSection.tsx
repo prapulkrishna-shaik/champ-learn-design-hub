@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { cn } from "@/lib/utils";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
@@ -8,50 +7,26 @@ const subjects = [
     name: "Mathematics",
     icon: "📐",
     color: "bg-gradechamp-blue/10 border-gradechamp-blue",
-    description: "Building problem-solving skills and confidence in numbers",
-    outcomes: "From fear of numbers to math champions",
-    classes: "Classes 5-10"
+    description: "Comprehensive mathematics education covering arithmetic, algebra, geometry, and more",
+    outcomes: "From basic concepts to advanced problem-solving",
+    classes: "Classes 4-10"
   },
   {
     name: "Science",
     icon: "🧪",
     color: "bg-gradechamp-green/20 border-green-500",
-    description: "Exploring concepts through experiments and real-world applications",
-    outcomes: "Turning curiosity into deep understanding",
-    classes: "Classes 5-10"
+    description: "In-depth coverage of physics and biology with practical experiments",
+    outcomes: "Building scientific thinking and analytical skills",
+    classes: "Classes 4-10"
   },
   {
-    name: "English",
-    icon: "📝",
+    name: "Chemistry",
+    icon: "⚗️",
     color: "bg-gradechamp-peach/20 border-orange-500",
-    description: "Developing confident communication and critical thinking skills",
-    outcomes: "From shy readers to articulate communicators",
-    classes: "Classes 5-10"
-  },
-  {
-    name: "Social Studies",
-    icon: "🌎",
-    color: "bg-gradechamp-softpurple/20 border-purple-500",
-    description: "Making history and geography engaging through storytelling",
-    outcomes: "Building global awareness and perspective",
-    classes: "Classes 5-10"
-  },
-  {
-    name: "Computer Science",
-    icon: "💻",
-    color: "bg-gradechamp-softpink/20 border-pink-500",
-    description: "Learning coding and digital literacy with practical projects",
-    outcomes: "From tech users to confident creators",
-    classes: "Classes 5-10"
-  },
-  {
-    name: "Foreign Languages",
-    icon: "🗣️",
-    color: "bg-gradechamp-yellow/20 border-yellow-500",
-    description: "Mastering new languages through conversation and culture",
-    outcomes: "Opening doors to global opportunities",
-    classes: "Classes 5-10"
-  },
+    description: "Exploring chemical concepts through theory and lab work",
+    outcomes: "Understanding chemical principles and reactions",
+    classes: "Classes 4-10"
+  }
 ];
 
 const SubjectsSection = () => {
