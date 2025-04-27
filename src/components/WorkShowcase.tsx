@@ -17,7 +17,7 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: "photo-1649972904349-6e44c42644a7", // woman with laptop
+    image: "photo-1581091226825-a6a2a5aee158", // woman using laptop
     title: "One-on-One Learning",
     description: "Personalized attention tailored to each student's unique learning needs"
   },
@@ -27,7 +27,7 @@ const slides: Slide[] = [
     description: "Comprehensive coding education with hands-on practical training"
   },
   {
-    image: "photo-1581091226825-a6a2a5aee158", // woman using laptop
+    image: "photo-1488590528505-98d2b5aba04b", // laptop computer
     title: "Remote Learning Excellence",
     description: "High-quality online tutoring from the comfort of your home"
   },
@@ -42,7 +42,7 @@ const slides: Slide[] = [
     description: "Collaborative learning that encourages teamwork and peer interaction"
   },
   {
-    image: "photo-1488590528505-98d2b5aba04b", // laptop computer
+    image: "photo-1498050108023-c5249f4df085", // MacBook with code
     title: "Tech-Enabled Learning",
     description: "Modern digital tools and resources to enhance educational experience"
   }
