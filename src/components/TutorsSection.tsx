@@ -8,32 +8,28 @@ const tutors = [
     subjects: "Mathematics",
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
     bio: "Emily believes in making math approachable through real-world examples. Her students say she turns math anxiety into math confidence.",
-    philosophy: "Learning happens when students feel safe to make mistakes.",
-    rating: 4.9
+    philosophy: "Learning happens when students feel safe to make mistakes."
   },
   {
     name: "David Chen",
     subjects: "Science",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
     bio: "David makes complex scientific concepts tangible through hands-on experiments and everyday examples.",
-    philosophy: "Curiosity is the foundation of all scientific discovery.",
-    rating: 4.8
+    philosophy: "Curiosity is the foundation of all scientific discovery."
   },
   {
     name: "Sarah Williams",
     subjects: "English Literature",
     image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
     bio: "Sarah helps students find their voice through writing and builds confidence in even the most reluctant readers.",
-    philosophy: "Every student has a unique voice waiting to be discovered.",
-    rating: 4.9
+    philosophy: "Every student has a unique voice waiting to be discovered."
   },
   {
     name: "Michael Rodriguez",
     subjects: "Computer Science",
     image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
     bio: "Michael transforms coding from intimidating to exciting by focusing on creative projects that students care about.",
-    philosophy: "Technology should be a tool for creativity, not just consumption.",
-    rating: 4.7
+    philosophy: "Technology should be a tool for creativity, not just consumption."
   }
 ];
 
@@ -51,15 +47,12 @@ const TutorsSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {tutors.map((tutor, index) => (
             <div key={index} className="card bg-white flex flex-col items-center text-center">
-              <div className="mb-4 relative">
+              <div className="mb-4">
                 <img 
                   src={tutor.image} 
                   alt={tutor.name} 
                   className="w-28 h-28 rounded-full object-cover border-4 border-gradechamp-blue/20"
                 />
-                <div className="absolute -bottom-2 -right-2 bg-gradechamp-yellow text-gray-800 rounded-full px-2 py-1 text-sm font-bold flex items-center">
-                  ★ {tutor.rating}
-                </div>
               </div>
               <h3 className="text-xl font-bold mb-1">{tutor.name}</h3>
               <div className="bg-gradechamp-green/20 text-gray-700 rounded-full px-3 py-1 text-sm mb-3 inline-flex items-center">
