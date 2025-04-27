@@ -17,34 +17,34 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: "photo-1649972904349-6e44c42644a7",
+    image: "photo-1649972904349-6e44c42644a7", // woman with laptop
     title: "One-on-One Learning",
-    description: "Personalized attention for every student"
+    description: "Personalized attention tailored to each student's unique learning needs"
   },
   {
-    image: "photo-1461749280684-dccba630e2f6",
+    image: "photo-1461749280684-dccba630e2f6", // programming class monitor
     title: "Programming Classes",
-    description: "Modern technical education"
+    description: "Comprehensive coding education with hands-on practical training"
   },
   {
-    image: "photo-1581091226825-a6a2a5aee158",
+    image: "photo-1581091226825-a6a2a5aee158", // woman using laptop
     title: "Remote Learning Excellence",
-    description: "Quality education from anywhere"
+    description: "High-quality online tutoring from the comfort of your home"
   },
   {
-    image: "photo-1486312338219-ce68d2c6f44d",
+    image: "photo-1486312338219-ce68d2c6f44d", // person using MacBook
     title: "Student Success",
-    description: "Building confidence through personalized mentorship"
+    description: "Building confidence and skills through expert mentorship"
   },
   {
-    image: "photo-1519389950473-47ba0277781c",
+    image: "photo-1519389950473-47ba0277781c", // people with laptops
     title: "Group Sessions",
-    description: "Collaborative learning opportunities"
+    description: "Collaborative learning that encourages teamwork and peer interaction"
   },
   {
-    image: "photo-1488590528505-98d2b5aba04b",
+    image: "photo-1488590528505-98d2b5aba04b", // laptop computer
     title: "Tech-Enabled Learning",
-    description: "Cutting-edge digital learning tools"
+    description: "Modern digital tools and resources to enhance educational experience"
   }
 ];
 
