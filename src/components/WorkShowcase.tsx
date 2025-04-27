@@ -9,7 +9,13 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 
-const slides = [
+interface Slide {
+  image: string;
+  title: string;
+  description: string;
+}
+
+const slides: Slide[] = [
   {
     image: "photo-1649972904349-6e44c42644a7",
     title: "One-on-One Learning",
@@ -42,7 +48,25 @@ const slides = [
   }
 ];
 
-const WorkShowcase = () => {
+const WorkShowcase: React.FC = () => {
+  const renderSlide = (slide: Slide, index: number) => (
+    <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+      <div className="card h-full flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl overflow-hidden">
+        <div className="relative aspect-video overflow-hidden">
+          <img
+            src={`https://source.unsplash.com/${slide.image}`}
+            alt={slide.title}
+            className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+          />
+        </div>
+        <div className="p-4 bg-white">
+          <h3 className="text-xl font-semibold mb-2 text-gradechamp-blue">{slide.title}</h3>
+          <p className="text-gray-600">{slide.description}</p>
+        </div>
+      </div>
+    </CarouselItem>
+  );
+
   return (
     <section className="section-padding bg-gradient-to-b from-white to-gradechamp-yellow/20">
       <div className="max-w-7xl mx-auto">
@@ -56,23 +80,7 @@ const WorkShowcase = () => {
         <div className="relative px-12">
           <Carousel className="w-full">
             <CarouselContent>
-              {slides.map((slide, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="card h-full flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl overflow-hidden">
-                    <div className="relative aspect-video overflow-hidden">
-                      <img
-                        src={`https://source.unsplash.com/${slide.image}`}
-                        alt={slide.title}
-                        className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
-                      />
-                    </div>
-                    <div className="p-4 bg-white">
-                      <h3 className="text-xl font-semibold mb-2 text-gradechamp-blue">{slide.title}</h3>
-                      <p className="text-gray-600">{slide.description}</p>
-                    </div>
-                  </div>
-                </CarouselItem>
-              ))}
+              {slides.map(renderSlide)}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
@@ -89,4 +97,3 @@ const WorkShowcase = () => {
 };
 
 export default WorkShowcase;
-
