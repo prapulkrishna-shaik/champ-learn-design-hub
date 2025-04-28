@@ -1,18 +1,45 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { School, Mail, Phone } from "lucide-react";
+import { School, Mail, Phone, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 
 const Footer = () => {
+  const socialLinks = {
+    facebook: "https://facebook.com/gradechamp",
+    instagram: "https://instagram.com/gradechamp",
+    linkedin: "https://linkedin.com/company/gradechamp",
+    twitter: "https://twitter.com/gradechamp"
+  };
+
   return (
     <footer className="bg-gray-100 pt-12 pb-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-gray-800">GradeChamp</h3>
+            <div className="flex items-center gap-2 mb-4">
+              <img 
+                src="/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png" 
+                alt="GradeChamp Logo" 
+                className="h-8 w-auto"
+              />
+              <h3 className="text-xl font-bold text-gray-800">GradeChamp</h3>
+            </div>
             <p className="text-gray-600 mb-4">
               Expert online tutoring for CBSE and State Board students in grades 4-10, specializing in Mathematics, Science, and Chemistry.
             </p>
+            <div className="flex space-x-4">
+              <a href={socialLinks.facebook} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gradechamp-blue transition-colors">
+                <Facebook className="h-5 w-5" />
+              </a>
+              <a href={socialLinks.instagram} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gradechamp-blue transition-colors">
+                <Instagram className="h-5 w-5" />
+              </a>
+              <a href={socialLinks.linkedin} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gradechamp-blue transition-colors">
+                <Linkedin className="h-5 w-5" />
+              </a>
+              <a href={socialLinks.twitter} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-gradechamp-blue transition-colors">
+                <Twitter className="h-5 w-5" />
+              </a>
+            </div>
           </div>
           
           <div>

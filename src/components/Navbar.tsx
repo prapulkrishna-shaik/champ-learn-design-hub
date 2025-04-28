@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
 import { Menu, X, MessageCircle } from "lucide-react";
@@ -28,7 +27,12 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 flex items-center">
+            <Link to="/" className="flex-shrink-0 flex items-center gap-2">
+              <img 
+                src="/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png" 
+                alt="GradeChamp Logo" 
+                className="h-8 w-auto"
+              />
               <span className="text-2xl font-bold text-gradechamp-blue font-heading">Grade<span className="text-gradechamp-lightblue">Champ</span></span>
             </Link>
           </div>
@@ -56,7 +60,6 @@ const Navbar = () => {
         </div>
       </div>
       
-      {/* Mobile menu */}
       {isMenuOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
