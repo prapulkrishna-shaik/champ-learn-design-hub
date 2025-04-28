@@ -49,6 +49,10 @@ const slides: Slide[] = [
 ];
 
 const WorkShowcase: React.FC = () => {
+  const handleBookClass = () => {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSd6ZEd1ASrDU65ypNz_BwEkPNG8nK1NViIGkC2kd_XPzZStow/viewform?usp=sharing', '_blank');
+  };
+  
   const renderSlide = (slide: Slide, index: number) => (
     <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
       <div className="card h-full flex flex-col shadow-lg hover:shadow-xl transition-shadow duration-300 rounded-xl overflow-hidden">
@@ -90,7 +94,7 @@ const WorkShowcase: React.FC = () => {
       
       {/* Sticky CTA Button (Mobile) */}
       <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white shadow-lg border-t border-gray-200 p-4 z-50">
-        <Button className="btn-primary w-full">Book a Free Class</Button>
+        <Button onClick={handleBookClass} className="btn-primary w-full">Book a Free Class</Button>
       </div>
     </section>
   );

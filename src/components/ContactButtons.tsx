@@ -5,7 +5,7 @@ import { MessageCircle } from "lucide-react";
 
 const ContactButtons = () => {
   const handleBookClass = () => {
-    window.open('https://docs.google.com/forms/d/e/1FAIpQLSd6ZEd1ASrDU65ypNz_BwEkPNG8nK1NViIGkC2kd_XPzZStow/viewform', '_blank');
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSd6ZEd1ASrDU65ypNz_BwEkPNG8nK1NViIGkC2kd_XPzZStow/viewform?usp=sharing', '_blank');
   };
 
   return (
