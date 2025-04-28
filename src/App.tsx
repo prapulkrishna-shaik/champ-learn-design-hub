@@ -9,6 +9,7 @@ import NotFound from "./pages/NotFound";
 import About from "./pages/About";
 import Curriculum from "./pages/Curriculum";
 import Approach from "./pages/Approach";
+import Teams from "./pages/Teams";
 
 const queryClient = new QueryClient();
 
@@ -23,6 +24,7 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/curriculum" element={<Curriculum />} />
           <Route path="/approach" element={<Approach />} />
+          <Route path="/teams" element={<Teams />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Play } from "lucide-react";
 
 interface Slide {
   image: string;
@@ -23,17 +24,17 @@ const slides: Slide[] = [
     description: "Personalized attention tailored to each student's unique learning needs"
   },
   {
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
     title: "Interactive Sessions",
     description: "Engaging learning experiences with real-time problem solving"
   },
   {
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     title: "Advanced Technology",
     description: "Using modern tools to enhance the learning experience"
   },
   {
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
     title: "Focused Learning",
     description: "Creating the perfect environment for academic growth"
   }
@@ -42,6 +43,10 @@ const slides: Slide[] = [
 const WorkShowcase: React.FC = () => {
   const handleBookClass = () => {
     window.open('https://docs.google.com/forms/d/e/1FAIpQLSd6ZEd1ASrDU65ypNz_BwEkPNG8nK1NViIGkC2kd_XPzZStow/viewform?usp=sharing', '_blank');
+  };
+
+  const handleWatchVideo = () => {
+    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
   };
 
   return (
@@ -80,20 +85,18 @@ const WorkShowcase: React.FC = () => {
           </Carousel>
         </div>
 
-        <div className="max-w-3xl mx-auto mb-12">
-          <h3 className="text-2xl font-bold text-center mb-6">See How It Works</h3>
-          <div className="aspect-video">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-              title="How GradeChamp Works"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="rounded-xl shadow-lg"
-            ></iframe>
-          </div>
+        <div className="flex justify-center gap-4 mb-12">
+          <Button onClick={handleBookClass} className="btn-primary">
+            Book a Free Class
+          </Button>
+          <Button 
+            variant="outline" 
+            onClick={handleWatchVideo} 
+            className="border-2 border-gradechamp-blue rounded-full text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white transition-colors shadow-sm text-lg inline-flex items-center"
+          >
+            <Play className="mr-2 h-4 w-4" />
+            See How It Works
+          </Button>
         </div>
       </div>
       

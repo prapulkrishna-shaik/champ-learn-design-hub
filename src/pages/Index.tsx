@@ -7,7 +7,6 @@ import SubjectsSection from '@/components/SubjectsSection';
 import TutorsSection from '@/components/TutorsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import WorkShowcase from '@/components/WorkShowcase';
-import TeamSection from '@/components/TeamSection';
 import InterestForm from '@/components/InterestForm';
 import SchoolCollaborations from '@/components/SchoolCollaborations';
 import Footer from '@/components/Footer';
@@ -21,7 +20,6 @@ const Index = () => {
         <WhySection />
         <SubjectsSection />
         <TutorsSection />
-        <TeamSection />
         <TestimonialsSection />
         <WorkShowcase />
         <SchoolCollaborations />
