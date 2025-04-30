@@ -1,6 +1,7 @@
+
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { School, Mail, Phone, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { School, Mail, Phone, Facebook, Instagram, Linkedin, Twitter, WhatsApp } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = {
@@ -8,6 +9,10 @@ const Footer = () => {
     instagram: "https://instagram.com/gradechamp",
     linkedin: "https://linkedin.com/company/gradechamp",
     twitter: "https://twitter.com/gradechamp"
+  };
+
+  const handleWhatsAppContact = () => {
+    window.open('https://wa.me/918555974274', '_blank');
   };
 
   return (
@@ -20,6 +25,7 @@ const Footer = () => {
                 src="/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png" 
                 alt="GradeChamp Logo" 
                 className="h-8 w-auto"
+                loading="lazy"
               />
               <h3 className="text-xl font-bold text-gray-800">GradeChamp</h3>
             </div>
@@ -72,6 +78,10 @@ const Footer = () => {
                 <Phone className="h-5 w-5 mr-2 text-gradechamp-blue" />
                 <a href="tel:+91-800-123-4567">+91-800-123-4567</a>
               </li>
+              <li className="flex items-center">
+                <WhatsApp className="h-5 w-5 mr-2 text-gradechamp-blue" />
+                <a href="https://wa.me/918555974274" target="_blank" rel="noopener noreferrer">+91 85559 74274</a>
+              </li>
             </ul>
             
             <div className="mt-6 bg-white p-4 rounded-lg shadow-sm">
@@ -82,8 +92,14 @@ const Footer = () => {
               <p className="text-sm text-gray-600 mb-3">
                 Partner with GradeChamp to bring personalized learning to your students.
               </p>
-              <Button variant="outline" size="sm" className="w-full border border-gradechamp-blue text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white rounded-full transition-colors">
-                Partner With Us
+              <Button 
+                variant="outline" 
+                size="sm" 
+                className="w-full border border-gradechamp-blue text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white rounded-full transition-colors"
+                onClick={handleWhatsAppContact}
+              >
+                <WhatsApp className="mr-2 h-4 w-4" />
+                Contact Us
               </Button>
             </div>
           </div>
@@ -99,4 +115,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default React.memo(Footer);

@@ -1,25 +1,31 @@
-import React, { useState, useEffect } from 'react';
+
+import React, { useState, useEffect, useCallback } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X, MessageCircle } from "lucide-react";
+import { Menu, X, WhatsApp } from "lucide-react";
 import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   
+  // Optimize scroll handler with useCallback
+  const handleScroll = useCallback(() => {
+    setIsScrolled(window.scrollY > 10);
+  }, []);
+  
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [handleScroll]);
 
   const handleBookClass = () => {
     window.open('https://docs.google.com/forms/d/e/1FAIpQLSd6ZEd1ASrDU65ypNz_BwEkPNG8nK1NViIGkC2kd_XPzZStow/viewform?usp=sharing', '_blank');
+  };
+
+  const handleWhatsAppContact = () => {
+    window.open('https://wa.me/918555974274', '_blank');
   };
 
   return (
@@ -32,6 +38,7 @@ const Navbar = () => {
                 src="/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png" 
                 alt="GradeChamp Logo" 
                 className="h-8 w-auto"
+                loading="eager"
               />
               <span className="text-2xl font-bold text-gradechamp-blue font-heading">Grade<span className="text-gradechamp-lightblue">Champ</span></span>
             </Link>
@@ -42,8 +49,12 @@ const Navbar = () => {
             <Link to="/curriculum" className="text-gray-700 hover:text-gradechamp-blue transition-colors">Curriculum</Link>
             <Link to="/approach" className="text-gray-700 hover:text-gradechamp-blue transition-colors">Our Approach</Link>
             <Link to="/teams" className="text-gray-700 hover:text-gradechamp-blue transition-colors">Our Team</Link>
-            <Button variant="outline" className="border-2 border-gradechamp-blue text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white rounded-full transition-colors">
-              <MessageCircle className="mr-2 h-4 w-4" />
+            <Button 
+              variant="outline" 
+              className="border-2 border-gradechamp-blue text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white rounded-full transition-colors"
+              onClick={handleWhatsAppContact}
+            >
+              <WhatsApp className="mr-2 h-4 w-4" />
               Contact Us
             </Button>
             <Button onClick={handleBookClass} className="btn-primary">Book a Free Class</Button>
@@ -69,8 +80,12 @@ const Navbar = () => {
             <Link to="/teams" className="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100">Our Team</Link>
             <div className="px-3 py-2">
               <Button onClick={handleBookClass} className="btn-primary w-full mb-2">Book a Free Class</Button>
-              <Button variant="outline" className="w-full border-2 border-gradechamp-blue text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white rounded-full transition-colors">
-                <MessageCircle className="mr-2 h-4 w-4" />
+              <Button 
+                variant="outline" 
+                className="w-full border-2 border-gradechamp-blue text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white rounded-full transition-colors"
+                onClick={handleWhatsAppContact}
+              >
+                <WhatsApp className="mr-2 h-4 w-4" />
                 Contact Us
               </Button>
             </div>
@@ -81,4 +96,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default React.memo(Navbar);
