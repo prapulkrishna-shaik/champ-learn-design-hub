@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
@@ -6,25 +5,25 @@ const testimonials = [
   {
     name: "Rebecca Thompson",
     role: "Parent of 7th Grader",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
     quote: "GradeChamp has transformed our evenings from homework battles to productive learning. My son now approaches math with confidence instead of dread."
   },
   {
     name: "Jason Miller",
     role: "Parent of 10th Grader",
-    image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
     quote: "The personal connection my daughter has with her GradeChamp tutor has made all the difference. Her grades have improved, but more importantly, she's excited about learning again."
   },
   {
     name: "Mia Chen",
     role: "8th Grade Student",
-    image: "https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
     quote: "I used to be too embarrassed to ask questions in class. With GradeChamp, I can ask anything without feeling judged, and now I'm one of the top students in science!"
   },
   {
     name: "Raj Patel",
     role: "Parent of 6th Grader",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
     quote: "The personalized attention at GradeChamp has helped my son develop study habits that will serve him throughout his academic journey. Worth every penny."
   }
 ];

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import {
   Carousel,
@@ -19,7 +18,7 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
     title: "One-on-One Learning",
     description: "Personalized attention tailored to each student's unique learning needs"
   },
@@ -29,12 +28,12 @@ const slides: Slide[] = [
     description: "Engaging learning experiences with real-time problem solving"
   },
   {
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
     title: "Advanced Technology",
     description: "Using modern tools to enhance the learning experience"
   },
   {
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
     title: "Focused Learning",
     description: "Creating the perfect environment for academic growth"
   }

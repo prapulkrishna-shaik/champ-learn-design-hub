@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Play } from "lucide-react";
@@ -47,14 +46,14 @@ const Hero = () => {
           <div className="hidden lg:flex justify-center relative">
             <div className="bg-white p-4 rounded-2xl shadow-xl rotate-3 animate-fade-in">
               <img 
-                src="https://images.unsplash.com/photo-1571260899304-425eee4c7efd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=80" 
+                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
                 alt="Student learning with a tutor" 
                 className="rounded-xl h-72 w-auto object-cover"
               />
             </div>
             <div className="bg-white p-4 rounded-2xl shadow-xl rotate-[-3deg] absolute top-10 right-0 animate-fade-in" style={{animationDelay: "0.3s"}}>
               <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" 
+                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
                 alt="Student on video call with tutor" 
                 className="rounded-xl h-60 w-auto object-cover"
               />

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { School } from "lucide-react";
 
@@ -7,25 +6,25 @@ const schools = [
     name: "Delhi Public School",
     location: "New Delhi",
     students: "250+ students enrolled",
-    image: "https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
   },
   {
     name: "Ryan International",
     location: "Mumbai",
     students: "180+ students enrolled",
-    image: "https://images.unsplash.com/photo-1580582932707-520aed937b7b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
   },
   {
     name: "St. Xavier's School",
     location: "Bangalore",
     students: "200+ students enrolled",
-    image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475"
   },
   {
     name: "DAV Public School",
     location: "Chennai",
     students: "150+ students enrolled",
-    image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
   }
 ];
 

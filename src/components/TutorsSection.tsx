@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { BookUser } from "lucide-react";
 
@@ -6,28 +5,28 @@ const tutors = [
   {
     name: "Emily Johnson",
     subjects: "Mathematics",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
     bio: "Emily believes in making math approachable through real-world examples. Her students say she turns math anxiety into math confidence.",
     philosophy: "Learning happens when students feel safe to make mistakes."
   },
   {
     name: "David Chen",
     subjects: "Science",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
     bio: "David makes complex scientific concepts tangible through hands-on experiments and everyday examples.",
     philosophy: "Curiosity is the foundation of all scientific discovery."
   },
   {
     name: "Sarah Williams",
     subjects: "English Literature",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
     bio: "Sarah helps students find their voice through writing and builds confidence in even the most reluctant readers.",
     philosophy: "Every student has a unique voice waiting to be discovered."
   },
   {
     name: "Michael Rodriguez",
     subjects: "Computer Science",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80",
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
     bio: "Michael transforms coding from intimidating to exciting by focusing on creative projects that students care about.",
     philosophy: "Technology should be a tool for creativity, not just consumption."
   }
