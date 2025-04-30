@@ -1,7 +1,8 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { School, Mail, Phone, Facebook, Instagram, Linkedin, Twitter, WhatsApp } from "lucide-react";
+import { School, Mail, Phone, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import WhatsAppContact from './WhatsAppContact';
 
 const Footer = () => {
   const socialLinks = {
@@ -9,10 +10,6 @@ const Footer = () => {
     instagram: "https://instagram.com/gradechamp",
     linkedin: "https://linkedin.com/company/gradechamp",
     twitter: "https://twitter.com/gradechamp"
-  };
-
-  const handleWhatsAppContact = () => {
-    window.open('https://wa.me/918555974274', '_blank');
   };
 
   return (
@@ -79,7 +76,14 @@ const Footer = () => {
                 <a href="tel:+91-800-123-4567">+91-800-123-4567</a>
               </li>
               <li className="flex items-center">
-                <WhatsApp className="h-5 w-5 mr-2 text-gradechamp-blue" />
+                <img 
+                  src="/lovable-uploads/whatsapp-icon.svg" 
+                  alt="WhatsApp" 
+                  className="h-5 w-5 mr-2 text-gradechamp-blue"
+                  onError={(e) => {
+                    e.currentTarget.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lc3NhZ2Utc3F1YXJlIj48cGF0aCBkPSJNMTQgOWE0IDQgMCAwIDEtOCAwTTUgMTVoMTRNMyA1LjVBLjUuNSAwIDAgMSAzLjUgNWgxN2EuNS41IDAgMCAxIC41LjV2MTNhLjUuNSAwIDAgMS0uNS41aC0xN2EuNS41IDAgMCAxLS41LS41di0xM1oiLz48L3N2Zz4=";
+                  }}
+                />
                 <a href="https://wa.me/918555974274" target="_blank" rel="noopener noreferrer">+91 85559 74274</a>
               </li>
             </ul>
@@ -92,15 +96,12 @@ const Footer = () => {
               <p className="text-sm text-gray-600 mb-3">
                 Partner with GradeChamp to bring personalized learning to your students.
               </p>
-              <Button 
+              <WhatsAppContact 
                 variant="outline" 
                 size="sm" 
-                className="w-full border border-gradechamp-blue text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white rounded-full transition-colors"
-                onClick={handleWhatsAppContact}
-              >
-                <WhatsApp className="mr-2 h-4 w-4" />
-                Contact Us
-              </Button>
+                text="Contact Us"
+                fullWidth={true}
+              />
             </div>
           </div>
         </div>

@@ -1,15 +1,11 @@
 
 import React from 'react';
 import { Button } from "@/components/ui/button";
-import { WhatsApp } from "lucide-react";
+import WhatsAppContact from './WhatsAppContact';
 
 const ContactButtons = React.memo(() => {
   const handleBookClass = () => {
     window.open('https://docs.google.com/forms/d/e/1FAIpQLSd6ZEd1ASrDU65ypNz_BwEkPNG8nK1NViIGkC2kd_XPzZStow/viewform?usp=sharing', '_blank');
-  };
-
-  const handleWhatsAppContact = () => {
-    window.open('https://wa.me/918555974274', '_blank');
   };
 
   return (
@@ -24,14 +20,11 @@ const ContactButtons = React.memo(() => {
           <Button onClick={handleBookClass} className="btn-primary flex-1">
             Book a Free Class
           </Button>
-          <Button 
+          <WhatsAppContact 
             variant="outline" 
-            className="flex-1 border-2 border-gradechamp-blue text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white rounded-full transition-colors"
-            onClick={handleWhatsAppContact}
-          >
-            <WhatsApp className="mr-2 h-4 w-4" />
-            Contact Us
-          </Button>
+            className="flex-1" 
+            text="Contact Us" 
+          />
         </div>
       </div>
     </section>

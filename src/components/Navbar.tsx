@@ -1,8 +1,9 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X, WhatsApp } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Link } from 'react-router-dom';
+import WhatsAppContact from './WhatsAppContact';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,10 +23,6 @@ const Navbar = () => {
 
   const handleBookClass = () => {
     window.open('https://docs.google.com/forms/d/e/1FAIpQLSd6ZEd1ASrDU65ypNz_BwEkPNG8nK1NViIGkC2kd_XPzZStow/viewform?usp=sharing', '_blank');
-  };
-
-  const handleWhatsAppContact = () => {
-    window.open('https://wa.me/918555974274', '_blank');
   };
 
   return (
@@ -49,14 +46,7 @@ const Navbar = () => {
             <Link to="/curriculum" className="text-gray-700 hover:text-gradechamp-blue transition-colors">Curriculum</Link>
             <Link to="/approach" className="text-gray-700 hover:text-gradechamp-blue transition-colors">Our Approach</Link>
             <Link to="/teams" className="text-gray-700 hover:text-gradechamp-blue transition-colors">Our Team</Link>
-            <Button 
-              variant="outline" 
-              className="border-2 border-gradechamp-blue text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white rounded-full transition-colors"
-              onClick={handleWhatsAppContact}
-            >
-              <WhatsApp className="mr-2 h-4 w-4" />
-              Contact Us
-            </Button>
+            <WhatsAppContact variant="outline" text="Contact Us" />
             <Button onClick={handleBookClass} className="btn-primary">Book a Free Class</Button>
           </div>
           
@@ -80,14 +70,7 @@ const Navbar = () => {
             <Link to="/teams" className="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100">Our Team</Link>
             <div className="px-3 py-2">
               <Button onClick={handleBookClass} className="btn-primary w-full mb-2">Book a Free Class</Button>
-              <Button 
-                variant="outline" 
-                className="w-full border-2 border-gradechamp-blue text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white rounded-full transition-colors"
-                onClick={handleWhatsAppContact}
-              >
-                <WhatsApp className="mr-2 h-4 w-4" />
-                Contact Us
-              </Button>
+              <WhatsAppContact variant="outline" text="Contact Us" fullWidth={true} />
             </div>
           </div>
         </div>
