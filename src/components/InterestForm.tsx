@@ -7,8 +7,9 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import * as z from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { School } from "lucide-react";
+import { Download, School } from "lucide-react";
 import { toast } from "sonner";
+import * as XLSX from 'xlsx';
 
 const formSchema = z.object({
   studentName: z.string().min(2, "Name must be at least 2 characters"),
@@ -30,9 +31,49 @@ const InterestForm = () => {
     },
   });
 
+  const downloadExcel = (data: z.infer<typeof formSchema>) => {
+    // Create a worksheet with the form data
+    const worksheet = XLSX.utils.json_to_sheet([
+      {
+        "Student Name": data.studentName,
+        "Parent Name": data.parentName,
+        "Email": data.email,
+        "Grade": data.grade,
+        "Subject": data.subject,
+        "Submission Date": new Date().toLocaleString(),
+      }
+    ]);
+    
+    // Set column widths for better readability
+    const columnWidths = [
+      { wch: 20 }, // Student Name
+      { wch: 20 }, // Parent Name
+      { wch: 30 }, // Email
+      { wch: 10 }, // Grade
+      { wch: 15 }, // Subject
+      { wch: 20 }, // Submission Date
+    ];
+    worksheet["!cols"] = columnWidths;
+
+    // Create a workbook and append the worksheet
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Interest Form Data");
+
+    // Generate filename with student name and date
+    const fileName = `GradeChamp_Interest_${data.studentName.replace(/\s+/g, '_')}_${new Date().toISOString().split('T')[0]}.xlsx`;
+    
+    // Download the file
+    XLSX.writeFile(workbook, fileName);
+  };
+
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     toast.success("Thank you for your interest! We'll reach out soon.");
     console.log(values);
+    
+    // Download the Excel file
+    downloadExcel(values);
+    
+    // Reset form
     form.reset();
   };
 
@@ -141,7 +182,10 @@ const InterestForm = () => {
                 )}
               />
 
-              <Button type="submit" className="w-full">Submit Interest</Button>
+              <Button type="submit" className="w-full flex items-center justify-center gap-2">
+                <span>Submit Interest</span>
+                <Download size={16} />
+              </Button>
             </form>
           </Form>
         </div>
