@@ -1,12 +1,12 @@
 
-import React from 'react';
+import React, { useCallback } from 'react';
 import { Button } from "@/components/ui/button";
 import WhatsAppContact from './WhatsAppContact';
 
 const ContactButtons = React.memo(() => {
-  const handleBookClass = () => {
+  const handleBookClass = useCallback(() => {
     window.open('https://docs.google.com/forms/d/e/1FAIpQLSd6ZEd1ASrDU65ypNz_BwEkPNG8nK1NViIGkC2kd_XPzZStow/viewform?usp=sharing', '_blank');
-  };
+  }, []);
 
   return (
     <section className="section-padding bg-gradient-to-b from-white to-gradechamp-yellow/20">
@@ -24,6 +24,7 @@ const ContactButtons = React.memo(() => {
             variant="outline" 
             className="flex-1" 
             text="Contact Us" 
+            phoneNumber="918555974274"
           />
         </div>
       </div>

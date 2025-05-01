@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { BookOpen, Users, Check, MessageCircle } from "lucide-react";
+import { BookOpen, Users, Check, MessageCircle, School, Lightbulb, Brain, Calendar } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const features = [
@@ -34,7 +34,30 @@ const features = [
   }
 ];
 
-const WhySection = () => {
+const teachingComparison = [
+  {
+    traditional: "Teacher-centered classroom",
+    gradechamp: "Student-centered personalized learning",
+    icon: <School className="h-8 w-8 text-gradechamp-green" />
+  },
+  {
+    traditional: "Fixed curriculum pace for all",
+    gradechamp: "Adaptive learning speed based on individual progress",
+    icon: <Calendar className="h-8 w-8 text-gradechamp-green" />
+  },
+  {
+    traditional: "Focus on rote memorization",
+    gradechamp: "Focus on conceptual understanding and application",
+    icon: <Brain className="h-8 w-8 text-gradechamp-green" />
+  },
+  {
+    traditional: "Limited time for doubt clarification",
+    gradechamp: "Dedicated time for questions and conceptual clarity",
+    icon: <Lightbulb className="h-8 w-8 text-gradechamp-green" />
+  }
+];
+
+const WhySection = React.memo(() => {
   return (
     <section id="why" className="section-padding bg-gradechamp-softpurple/10">
       <div className="max-w-7xl mx-auto">
@@ -49,7 +72,7 @@ const WhySection = () => {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="card bg-white hover:bg-gradechamp-blue/5 transition-colors"
+              className="card bg-white hover:bg-gradechamp-blue/5 transition-colors p-6 rounded-xl shadow-md"
             >
               <div className="bg-gradechamp-green/50 w-16 h-16 rounded-full flex items-center justify-center mb-4">
                 {feature.icon}
@@ -80,9 +103,40 @@ const WhySection = () => {
             </div>
           ))}
         </div>
+
+        {/* New Teaching Methods Comparison Section */}
+        <div className="mt-16">
+          <h2 className="text-3xl font-bold text-center mb-8">Traditional Teaching vs. GradeChamp Approach</h2>
+          
+          <div className="overflow-hidden bg-white shadow-md rounded-xl">
+            <div className="grid grid-cols-1 divide-y divide-gray-200">
+              <div className="grid grid-cols-11 bg-gradechamp-blue/10 font-bold text-center py-4">
+                <div className="col-span-5 px-4">Traditional Teaching</div>
+                <div className="col-span-1 flex justify-center items-center">
+                  <div className="w-px h-full bg-gray-300"></div>
+                </div>
+                <div className="col-span-5 px-4">GradeChamp Method</div>
+              </div>
+              
+              {teachingComparison.map((item, index) => (
+                <div key={index} className="grid grid-cols-11 text-center py-4 hover:bg-gray-50 transition-colors">
+                  <div className="col-span-5 px-4 flex items-center justify-center">
+                    <p className="text-gray-700">{item.traditional}</p>
+                  </div>
+                  <div className="col-span-1 flex justify-center items-center">
+                    {item.icon}
+                  </div>
+                  <div className="col-span-5 px-4 flex items-center justify-center">
+                    <p className="text-gradechamp-blue font-medium">{item.gradechamp}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
-};
+});
 
 export default WhySection;

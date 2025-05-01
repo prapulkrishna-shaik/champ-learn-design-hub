@@ -7,11 +7,11 @@ import SubjectsSection from '@/components/SubjectsSection';
 import TutorsSection from '@/components/TutorsSection';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import WorkShowcase from '@/components/WorkShowcase';
-import InterestForm from '@/components/InterestForm';
 import SchoolCollaborations from '@/components/SchoolCollaborations';
 import Footer from '@/components/Footer';
+import ContactButtons from '@/components/ContactButtons';
 
-const Index = () => {
+const Index = React.memo(() => {
   return (
     <div className="flex flex-col min-h-screen">
       <Navbar />
@@ -23,11 +23,11 @@ const Index = () => {
         <TestimonialsSection />
         <WorkShowcase />
         <SchoolCollaborations />
-        <InterestForm />
+        <ContactButtons />
       </main>
       <Footer />
     </div>
   );
-};
+});
 
 export default Index;

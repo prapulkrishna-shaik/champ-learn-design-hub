@@ -1,8 +1,17 @@
-import React from 'react';
+
+import React, { useCallback } from 'react';
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Play } from "lucide-react";
 
-const Hero = () => {
+const Hero = React.memo(() => {
+  const handleBookClass = useCallback(() => {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSd6ZEd1ASrDU65ypNz_BwEkPNG8nK1NViIGkC2kd_XPzZStow/viewform?usp=sharing', '_blank');
+  }, []);
+
+  const handleVideoPlay = useCallback(() => {
+    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+  }, []);
+
   return (
     <section className="relative bg-gradient-to-b from-gradechamp-blue/10 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
@@ -23,8 +32,12 @@ const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button className="btn-primary text-lg">Book a Free Class</Button>
-              <Button variant="outline" className="border-2 border-gradechamp-blue rounded-full text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white transition-colors shadow-sm text-lg inline-flex items-center">
+              <Button onClick={handleBookClass} className="btn-primary text-lg">Book a Free Class</Button>
+              <Button 
+                variant="outline" 
+                onClick={handleVideoPlay}
+                className="border-2 border-gradechamp-blue rounded-full text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white transition-colors shadow-sm text-lg inline-flex items-center"
+              >
                 <Play className="mr-2 h-4 w-4" />
                 See How It Works
               </Button>
@@ -46,16 +59,18 @@ const Hero = () => {
           <div className="hidden lg:flex justify-center relative">
             <div className="bg-white p-4 rounded-2xl shadow-xl rotate-3 animate-fade-in">
               <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d" 
-                alt="Student learning with a tutor" 
+                src="https://images.unsplash.com/photo-1613066823029-4fba02c3bcb6" 
+                alt="Indian student learning with a tutor" 
                 className="rounded-xl h-72 w-auto object-cover"
+                loading="eager"
               />
             </div>
             <div className="bg-white p-4 rounded-2xl shadow-xl rotate-[-3deg] absolute top-10 right-0 animate-fade-in" style={{animationDelay: "0.3s"}}>
               <img 
-                src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b" 
-                alt="Student on video call with tutor" 
+                src="https://images.unsplash.com/photo-1613066823664-1d4601ecadc3" 
+                alt="Indian student on video call with tutor" 
                 className="rounded-xl h-60 w-auto object-cover"
+                loading="eager"
               />
             </div>
           </div>
@@ -65,6 +80,6 @@ const Hero = () => {
       <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
     </section>
   );
-};
+});
 
 export default Hero;

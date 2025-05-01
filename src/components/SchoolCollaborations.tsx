@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { School } from "lucide-react";
 
@@ -6,29 +7,29 @@ const schools = [
     name: "Delhi Public School",
     location: "New Delhi",
     students: "250+ students enrolled",
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d"
+    image: "/lovable-uploads/7d814bf1-891d-44ac-b85a-8a028e7ceb74.png"
   },
   {
     name: "Ryan International",
     location: "Mumbai",
     students: "180+ students enrolled",
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b"
+    image: "https://images.unsplash.com/photo-1613066835265-3f26e1bda229?q=80&w=1000"
   },
   {
     name: "St. Xavier's School",
     location: "Bangalore",
     students: "200+ students enrolled",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475"
+    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1000"
   },
   {
     name: "DAV Public School",
     location: "Chennai",
     students: "150+ students enrolled",
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+    image: "https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?q=80&w=1000"
   }
 ];
 
-const SchoolCollaborations = () => {
+const SchoolCollaborations = React.memo(() => {
   return (
     <section className="section-padding bg-gradechamp-softpurple/10">
       <div className="max-w-7xl mx-auto">
@@ -50,6 +51,7 @@ const SchoolCollaborations = () => {
                   src={school.image}
                   alt={school.name}
                   className="w-full h-full object-cover"
+                  loading="lazy"
                 />
               </div>
               <h3 className="text-xl font-bold text-center mb-2">{school.name}</h3>
@@ -61,6 +63,6 @@ const SchoolCollaborations = () => {
       </div>
     </section>
   );
-};
+});
 
 export default SchoolCollaborations;

@@ -1,4 +1,5 @@
-import React from 'react';
+
+import React, { useCallback } from 'react';
 import {
   Carousel,
   CarouselContent,
@@ -18,35 +19,35 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d",
+    image: "https://images.unsplash.com/photo-1613066823029-4fba02c3bcb6",
     title: "One-on-One Learning",
     description: "Personalized attention tailored to each student's unique learning needs"
   },
   {
-    image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b",
+    image: "https://images.unsplash.com/photo-1613066823664-1d4601ecadc3",
     title: "Interactive Sessions",
     description: "Engaging learning experiences with real-time problem solving"
   },
   {
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475",
+    image: "https://images.unsplash.com/photo-1613066835265-3f26e1bda229",
     title: "Advanced Technology",
     description: "Using modern tools to enhance the learning experience"
   },
   {
-    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6",
+    image: "/lovable-uploads/7d814bf1-891d-44ac-b85a-8a028e7ceb74.png",
     title: "Focused Learning",
     description: "Creating the perfect environment for academic growth"
   }
 ];
 
-const WorkShowcase: React.FC = () => {
-  const handleBookClass = () => {
+const WorkShowcase: React.FC = React.memo(() => {
+  const handleBookClass = useCallback(() => {
     window.open('https://docs.google.com/forms/d/e/1FAIpQLSd6ZEd1ASrDU65ypNz_BwEkPNG8nK1NViIGkC2kd_XPzZStow/viewform?usp=sharing', '_blank');
-  };
+  }, []);
 
-  const handleWatchVideo = () => {
+  const handleWatchVideo = useCallback(() => {
     window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
-  };
+  }, []);
 
   return (
     <section className="section-padding bg-gradient-to-b from-white to-gradechamp-yellow/20">
@@ -69,6 +70,7 @@ const WorkShowcase: React.FC = () => {
                         src={slide.image}
                         alt={slide.title}
                         className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                        loading="lazy"
                       />
                     </div>
                     <CardContent className="p-4">
@@ -104,6 +106,6 @@ const WorkShowcase: React.FC = () => {
       </div>
     </section>
   );
-};
+});
 
 export default WorkShowcase;
