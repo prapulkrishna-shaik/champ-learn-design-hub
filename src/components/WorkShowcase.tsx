@@ -19,22 +19,22 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: "https://images.unsplash.com/photo-1613066823029-4fba02c3bcb6",
+    image: "/lovable-uploads/7d814bf1-891d-44ac-b85a-8a028e7ceb74.png",
     title: "One-on-One Learning",
     description: "Personalized attention tailored to each student's unique learning needs"
   },
   {
-    image: "https://images.unsplash.com/photo-1613066823664-1d4601ecadc3",
+    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
     title: "Interactive Sessions",
     description: "Engaging learning experiences with real-time problem solving"
   },
   {
-    image: "https://images.unsplash.com/photo-1613066835265-3f26e1bda229",
+    image: "/lovable-uploads/7d814bf1-891d-44ac-b85a-8a028e7ceb74.png",
     title: "Advanced Technology",
     description: "Using modern tools to enhance the learning experience"
   },
   {
-    image: "/lovable-uploads/7d814bf1-891d-44ac-b85a-8a028e7ceb74.png",
+    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
     title: "Focused Learning",
     description: "Creating the perfect environment for academic growth"
   }
@@ -71,6 +71,10 @@ const WorkShowcase: React.FC = React.memo(() => {
                         alt={slide.title}
                         className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
                         loading="lazy"
+                        onError={(e) => {
+                          // Fallback in case image fails to load
+                          e.currentTarget.src = "/placeholder.svg";
+                        }}
                       />
                     </div>
                     <CardContent className="p-4">
