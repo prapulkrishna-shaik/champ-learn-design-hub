@@ -1,6 +1,5 @@
 
 import React from 'react';
-import { School } from "lucide-react";
 
 const schools = [
   {
@@ -10,22 +9,22 @@ const schools = [
     image: "/lovable-uploads/7d814bf1-891d-44ac-b85a-8a028e7ceb74.png"
   },
   {
-    name: "Ryan International",
+    name: "Ryan International School",
     location: "Mumbai",
     students: "180+ students enrolled",
-    image: "https://images.unsplash.com/photo-1613066835265-3f26e1bda229?q=80&w=1000"
+    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png"
   },
   {
     name: "St. Xavier's School",
     location: "Bangalore",
     students: "200+ students enrolled",
-    image: "https://images.unsplash.com/photo-1577896851231-70ef18881754?q=80&w=1000"
+    image: "/lovable-uploads/7d814bf1-891d-44ac-b85a-8a028e7ceb74.png"
   },
   {
     name: "DAV Public School",
     location: "Chennai",
     students: "150+ students enrolled",
-    image: "https://images.unsplash.com/photo-1627556704290-2b1f5853ff78?q=80&w=1000"
+    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png"
   }
 ];
 
@@ -49,9 +48,12 @@ const SchoolCollaborations = React.memo(() => {
               <div className="mb-4 aspect-video rounded-lg overflow-hidden">
                 <img 
                   src={school.image}
-                  alt={school.name}
+                  alt={`${school.name} campus`}
                   className="w-full h-full object-cover"
                   loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.src = "/placeholder.svg";
+                  }}
                 />
               </div>
               <h3 className="text-xl font-bold text-center mb-2">{school.name}</h3>
