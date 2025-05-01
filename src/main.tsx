@@ -20,10 +20,8 @@ const preloadAssets = () => {
   // Define Indian teaching and school related images for preloading
   const criticalImages = [
     '/lovable-uploads/7d814bf1-891d-44ac-b85a-8a028e7ceb74.png',
-    'https://images.unsplash.com/photo-1613066835265-3f26e1bda229',
-    'https://images.unsplash.com/photo-1577896851231-70ef18881754',
-    'https://images.unsplash.com/photo-1613066823029-4fba02c3bcb6',
-    'https://images.unsplash.com/photo-1613066823664-1d4601ecadc3',
+    '/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png',
+    '/placeholder.svg',
     '/lovable-uploads/whatsapp-icon.svg'
   ];
   
@@ -37,7 +35,7 @@ const preloadAssets = () => {
   });
   
   // Add preconnect for external resources
-  const preconnectUrls = ['https://images.unsplash.com'];
+  const preconnectUrls = ['https://docs.google.com', 'https://www.youtube.com'];
   preconnectUrls.forEach(url => {
     const preconnect = document.createElement('link');
     preconnect.rel = 'preconnect';
