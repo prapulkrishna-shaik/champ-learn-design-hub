@@ -8,6 +8,7 @@ interface WhatsAppContactProps {
   size?: "default" | "sm" | "lg" | "icon";
   fullWidth?: boolean;
   text?: string;
+  phoneNumber?: string;
 }
 
 const WhatsAppContact: React.FC<WhatsAppContactProps> = ({
@@ -15,10 +16,11 @@ const WhatsAppContact: React.FC<WhatsAppContactProps> = ({
   variant = "outline",
   size = "default",
   fullWidth = false,
-  text = "Contact Us"
+  text = "Contact Us",
+  phoneNumber = "918555974274"
 }) => {
   const handleWhatsAppContact = () => {
-    window.open('https://wa.me/918555974274', '_blank');
+    window.open(`https://wa.me/${phoneNumber}`, '_blank');
   };
 
   return (
