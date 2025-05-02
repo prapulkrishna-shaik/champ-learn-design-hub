@@ -44,8 +44,8 @@ const App = () => (
             <Route path="/approach" element={<Approach />} />
             <Route path="/teams" element={<Teams />} />
             
-            {/* Handle hash routes and direct access */}
-            <Route path="/teams/*" element={<Navigate to="/teams" />} />
+            {/* Handle direct access with any pattern for main sections */}
+            <Route path="/teams/:memberSection" element={<Teams />} />
             <Route path="/curriculum/*" element={<Navigate to="/curriculum" />} />
             <Route path="/about/*" element={<Navigate to="/about" />} />
             <Route path="/approach/*" element={<Navigate to="/approach" />} />
