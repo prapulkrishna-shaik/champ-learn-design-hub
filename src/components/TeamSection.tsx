@@ -5,8 +5,8 @@ import { teamMembers } from '@/data/teamData';
 
 const TeamSection = () => {
   return (
-    <section className="section-padding bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="section-padding bg-white py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">Meet Our Team</h2>
         <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           Our experienced educators are dedicated to helping students achieve their academic goals
@@ -14,12 +14,17 @@ const TeamSection = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {teamMembers.map((member, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
+            <Card 
+              key={index} 
+              className="hover:shadow-lg transition-shadow"
+              id={`team-member-${index}`}
+            >
               <CardHeader className="p-0">
                 <img
                   src={member.image}
                   alt={member.name}
                   className="w-full h-48 object-cover rounded-t-lg"
+                  loading={index < 4 ? "eager" : "lazy"}
                 />
               </CardHeader>
               <CardContent className="p-6">
