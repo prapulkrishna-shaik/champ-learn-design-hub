@@ -4,7 +4,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 // Lazy load pages for better performance
 const Index = lazy(() => import("./pages/Index"));
@@ -43,6 +43,11 @@ const App = () => (
             <Route path="/curriculum" element={<Curriculum />} />
             <Route path="/approach" element={<Approach />} />
             <Route path="/teams" element={<Teams />} />
+            
+            {/* Add a redirect for the hash links to work properly */}
+            <Route path="/curriculum/*" element={<Navigate to="/curriculum" />} />
+            
+            {/* Catch-all route for 404 errors */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

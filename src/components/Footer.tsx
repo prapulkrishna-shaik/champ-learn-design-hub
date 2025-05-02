@@ -13,6 +13,14 @@ const Footer = () => {
     twitter: "https://twitter.com/gradechamp"
   };
 
+  // Function to handle scroll to section when using hash links
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-gray-100 pt-12 pb-6">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -59,9 +67,33 @@ const Footer = () => {
           <div>
             <h4 className="text-gray-800 font-bold mb-4">Subjects</h4>
             <ul className="space-y-2 text-gray-600">
-              <li><Link to="/curriculum#mathematics" className="hover:text-gradechamp-blue transition-colors">Mathematics</Link></li>
-              <li><Link to="/curriculum#science" className="hover:text-gradechamp-blue transition-colors">Science</Link></li>
-              <li><Link to="/curriculum#chemistry" className="hover:text-gradechamp-blue transition-colors">Chemistry</Link></li>
+              <li>
+                <Link 
+                  to="/curriculum" 
+                  className="hover:text-gradechamp-blue transition-colors"
+                  onClick={() => setTimeout(() => scrollToSection('mathematics'), 100)}
+                >
+                  Mathematics
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/curriculum" 
+                  className="hover:text-gradechamp-blue transition-colors"
+                  onClick={() => setTimeout(() => scrollToSection('science'), 100)}
+                >
+                  Science
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  to="/curriculum" 
+                  className="hover:text-gradechamp-blue transition-colors"
+                  onClick={() => setTimeout(() => scrollToSection('chemistry'), 100)}
+                >
+                  Chemistry
+                </Link>
+              </li>
             </ul>
           </div>
           
