@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { School, Mail, Phone, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
 import WhatsAppContact from './WhatsAppContact';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const socialLinks = {
@@ -48,19 +49,19 @@ const Footer = () => {
           <div>
             <h4 className="text-gray-800 font-bold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-gray-600">
-              <li><a href="/about" className="hover:text-gradechamp-blue transition-colors">About Us</a></li>
-              <li><a href="/curriculum" className="hover:text-gradechamp-blue transition-colors">Curriculum</a></li>
-              <li><a href="/approach" className="hover:text-gradechamp-blue transition-colors">Our Approach</a></li>
-              <li><a href="#tutors" className="hover:text-gradechamp-blue transition-colors">Our Tutors</a></li>
+              <li><Link to="/about" className="hover:text-gradechamp-blue transition-colors">About Us</Link></li>
+              <li><Link to="/curriculum" className="hover:text-gradechamp-blue transition-colors">Curriculum</Link></li>
+              <li><Link to="/approach" className="hover:text-gradechamp-blue transition-colors">Our Approach</Link></li>
+              <li><Link to="/teams" className="hover:text-gradechamp-blue transition-colors">Our Tutors</Link></li>
             </ul>
           </div>
           
           <div>
             <h4 className="text-gray-800 font-bold mb-4">Subjects</h4>
             <ul className="space-y-2 text-gray-600">
-              <li><a href="/curriculum#mathematics" className="hover:text-gradechamp-blue transition-colors">Mathematics</a></li>
-              <li><a href="/curriculum#science" className="hover:text-gradechamp-blue transition-colors">Science</a></li>
-              <li><a href="/curriculum#chemistry" className="hover:text-gradechamp-blue transition-colors">Chemistry</a></li>
+              <li><Link to="/curriculum#mathematics" className="hover:text-gradechamp-blue transition-colors">Mathematics</Link></li>
+              <li><Link to="/curriculum#science" className="hover:text-gradechamp-blue transition-colors">Science</Link></li>
+              <li><Link to="/curriculum#chemistry" className="hover:text-gradechamp-blue transition-colors">Chemistry</Link></li>
             </ul>
           </div>
           
