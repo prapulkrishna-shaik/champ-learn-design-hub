@@ -59,23 +59,23 @@ const Hero = React.memo(() => {
           <div className="hidden lg:flex justify-center relative">
             <div className="bg-white p-4 rounded-2xl shadow-xl rotate-3 animate-fade-in">
               <img 
-                src="assets/indian-classroom-students.jpg" 
+                src="/assets/indian-classroom-students.jpg" 
                 alt="Indian students in classroom" 
                 className="rounded-xl h-72 w-auto object-cover"
                 loading="eager"
                 onError={(e) => {
-                  e.currentTarget.src = "assets/placeholder.svg";
+                  e.currentTarget.src = "/assets/placeholder.svg";
                 }}
               />
             </div>
             <div className="bg-white p-4 rounded-2xl shadow-xl rotate-[-3deg] absolute top-10 right-0 animate-fade-in" style={{animationDelay: "0.3s"}}>
               <img 
-                src="assets/indian-student-chalkboard.jpg" 
+                src="/assets/indian-student-chalkboard.jpg" 
                 alt="Indian student at chalkboard" 
                 className="rounded-xl h-60 w-auto object-cover"
                 loading="eager"
                 onError={(e) => {
-                  e.currentTarget.src = "assets/placeholder.svg";
+                  e.currentTarget.src = "/assets/placeholder.svg";
                 }}
               />
             </div>

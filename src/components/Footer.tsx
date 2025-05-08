@@ -28,7 +28,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img 
-                src="assets/school-icon.png" 
+                src="/assets/school-icon.png" 
                 alt="GradeChamp Logo" 
                 className="h-8 w-auto"
                 loading="lazy"
@@ -110,7 +110,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <img 
-                  src="assets/whatsapp-icon.svg" 
+                  src="/assets/whatsapp-icon.svg" 
                   alt="WhatsApp" 
                   className="h-5 w-5 mr-2 text-gradechamp-blue"
                   onError={(e) => {

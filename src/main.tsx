@@ -19,14 +19,14 @@ const root = createRoot(container);
 const preloadAssets = () => {
   // Define Indian teaching and school related images for preloading
   const criticalImages = [
-    'assets/indian-classroom-students.jpg',
-    'assets/indian-student-chalkboard.jpg',
-    'assets/classroom-learning.jpg',
-    'assets/students-interactive-session.jpg',
-    'assets/students-group-study.jpg',
-    'assets/student-chalkboard.jpg',
-    'assets/placeholder.svg',
-    'assets/whatsapp-icon.svg'
+    '/assets/indian-classroom-students.jpg',
+    '/assets/indian-student-chalkboard.jpg',
+    '/assets/classroom-learning.jpg',
+    '/assets/students-interactive-session.jpg',
+    '/assets/students-group-study.jpg',
+    '/assets/student-chalkboard.jpg',
+    '/assets/placeholder.svg',
+    '/assets/whatsapp-icon.svg'
   ];
   
   // Preload all critical images
