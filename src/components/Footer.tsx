@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { School, Mail, Phone, Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
@@ -28,7 +27,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img 
-                src="/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png" 
+                src="/assets/school-icon.png" 
                 alt="GradeChamp Logo" 
                 className="h-8 w-auto"
                 loading="lazy"

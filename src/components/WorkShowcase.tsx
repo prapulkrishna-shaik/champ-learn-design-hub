@@ -19,22 +19,22 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: "/classroom-learning.jpg",
+    image: "/assets/classroom-learning.jpg",
     title: "One-on-One Learning",
     description: "Personalized attention tailored to each student's unique learning needs"
   },
   {
-    image: "/students-interactive-session.jpg",
+    image: "/assets/students-interactive-session.jpg",
     title: "Interactive Sessions",
     description: "Engaging learning experiences with real-time problem solving"
   },
   {
-    image: "/student-chalkboard.jpg",
+    image: "/assets/student-chalkboard.jpg",
     title: "Advanced Technology",
     description: "Using modern tools to enhance the learning experience"
   },
   {
-    image: "/students-group-study.jpg",
+    image: "/assets/students-group-study.jpg",
     title: "Focused Learning",
     description: "Creating the perfect environment for academic growth"
   }
@@ -73,7 +73,7 @@ const WorkShowcase: React.FC = React.memo(() => {
                         loading="lazy"
                         onError={(e) => {
                           // Fallback in case image fails to load
-                          e.currentTarget.src = "/placeholder.svg";
+                          e.currentTarget.src = "/assets/placeholder.svg";
                         }}
                       />
                     </div>
