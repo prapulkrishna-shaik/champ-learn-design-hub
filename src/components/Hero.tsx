@@ -59,8 +59,8 @@ const Hero = React.memo(() => {
           <div className="hidden lg:flex justify-center relative">
             <div className="bg-white p-4 rounded-2xl shadow-xl rotate-3 animate-fade-in">
               <img 
-                src="/lovable-uploads/7d814bf1-891d-44ac-b85a-8a028e7ceb74.png" 
-                alt="Indian student learning with a tutor" 
+                src="/indian-classroom-students.jpg" 
+                alt="Indian students in classroom" 
                 className="rounded-xl h-72 w-auto object-cover"
                 loading="eager"
                 onError={(e) => {
@@ -70,8 +70,8 @@ const Hero = React.memo(() => {
             </div>
             <div className="bg-white p-4 rounded-2xl shadow-xl rotate-[-3deg] absolute top-10 right-0 animate-fade-in" style={{animationDelay: "0.3s"}}>
               <img 
-                src="/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png" 
-                alt="Indian student on video call with tutor" 
+                src="/indian-student-chalkboard.jpg" 
+                alt="Indian student at chalkboard" 
                 className="rounded-xl h-60 w-auto object-cover"
                 loading="eager"
                 onError={(e) => {

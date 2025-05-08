@@ -19,22 +19,22 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: "/lovable-uploads/7d814bf1-891d-44ac-b85a-8a028e7ceb74.png",
+    image: "/classroom-learning.jpg",
     title: "One-on-One Learning",
     description: "Personalized attention tailored to each student's unique learning needs"
   },
   {
-    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
+    image: "/students-interactive-session.jpg",
     title: "Interactive Sessions",
     description: "Engaging learning experiences with real-time problem solving"
   },
   {
-    image: "/lovable-uploads/7d814bf1-891d-44ac-b85a-8a028e7ceb74.png",
+    image: "/student-chalkboard.jpg",
     title: "Advanced Technology",
     description: "Using modern tools to enhance the learning experience"
   },
   {
-    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
+    image: "/students-group-study.jpg",
     title: "Focused Learning",
     description: "Creating the perfect environment for academic growth"
   }
