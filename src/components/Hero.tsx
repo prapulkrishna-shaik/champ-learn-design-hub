@@ -13,77 +13,80 @@ const Hero = React.memo(() => {
   }, []);
 
   return (
-    <section className="relative bg-gradient-to-b from-gradechamp-blue/10 to-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <section className="relative bg-gradient-to-b from-gradechamp-softpurple/40 to-white py-16 md:py-24">
+      <div className="content-wrapper">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-fade-in">
-            <div className="inline-flex items-center bg-white/60 backdrop-blur-sm py-1 px-3 rounded-full mb-6 border border-gradechamp-blue/20">
-              <GraduationCap className="text-gradechamp-blue mr-2 h-4 w-4" />
-              <span className="text-sm font-medium">1-on-1 Learning for Grades 5-10</span>
+            <div className="inline-flex items-center bg-white/60 backdrop-blur-sm py-1.5 px-4 rounded-full mb-6 border border-gradechamp-purple/20 shadow-sm">
+              <GraduationCap className="text-gradechamp-purple mr-2 h-4 w-4" />
+              <span className="text-sm font-medium">Personalized Learning for Grades 5-10</span>
             </div>
             
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-gray-800 leading-tight">
-              Personalized Learning That Builds <br />
-              <span className="text-gradechamp-blue">Confidence, Not Just Grades</span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Build <span className="gradient-text">Confidence</span> and <span className="gradient-text">Knowledge</span> with Expert 1-on-1 Tutoring
             </h1>
             
-            <p className="text-lg text-gray-600 mb-8 max-w-lg">
-              Our 1-on-1 tutoring connects your child with expert mentors who focus on building understanding, confidence, and a love for learning.
+            <p className="text-lg text-gray-600 mb-8 max-w-xl">
+              GradeChamp connects your child with expert tutors who make learning personal, engaging, and effective—focusing on building deep understanding, not just grades.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Button onClick={handleBookClass} className="btn-primary text-lg">Book a Free Class</Button>
+            <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <Button onClick={handleBookClass} className="btn-primary text-lg relative overflow-hidden group">
+                <span className="relative z-10">Book a Free Demo Class</span>
+                <span className="absolute inset-0 bg-white/20 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+              </Button>
               <Button 
                 variant="outline" 
                 onClick={handleVideoPlay}
-                className="border-2 border-gradechamp-blue rounded-full text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white transition-colors shadow-sm text-lg inline-flex items-center"
+                className="border-2 border-gradechamp-purple rounded-full text-gradechamp-purple hover:bg-gradechamp-purple hover:text-white transition-colors duration-300 shadow-sm text-lg flex items-center"
               >
                 <Play className="mr-2 h-4 w-4" />
                 See How It Works
               </Button>
             </div>
             
-            <div className="mt-8 flex items-center space-x-4">
-              <div className="badge bg-gradechamp-softpurple text-gray-700">
+            <div className="flex flex-wrap gap-3">
+              <div className="badge bg-gradechamp-softpurple text-gradechamp-darkpurple font-medium">
                 5000+ Classes Delivered
               </div>
-              <div className="badge bg-gradechamp-green text-gray-700">
-                Expert Mentors
+              <div className="badge bg-gradechamp-green text-gray-700 font-medium">
+                Expert Tutors
               </div>
-              <div className="badge bg-gradechamp-yellow text-gray-700">
-                95% Satisfaction
+              <div className="badge bg-gradechamp-yellow text-gray-700 font-medium">
+                95% Parent Satisfaction
               </div>
             </div>
           </div>
           
-          <div className="hidden lg:flex justify-center relative">
-            <div className="bg-white p-4 rounded-2xl shadow-xl rotate-3 animate-fade-in">
-              <img 
-                src="assets/indian-classroom-students.jpg" 
-                alt="Indian students in classroom" 
-                className="rounded-xl h-72 w-auto object-cover"
-                loading="eager"
-                onError={(e) => {
-                  e.currentTarget.src = "assets/placeholder.svg";
-                }}
-              />
-            </div>
-            <div className="bg-white p-4 rounded-2xl shadow-xl rotate-[-3deg] absolute top-10 right-0 animate-fade-in" style={{animationDelay: "0.3s"}}>
-              <img 
-                src="assets/indian-student-chalkboard.jpg" 
-                alt="Indian student at chalkboard" 
-                className="rounded-xl h-60 w-auto object-cover"
-                loading="eager"
-                onError={(e) => {
-                  e.currentTarget.src = "assets/placeholder.svg";
-                }}
-              />
+          <div className="hidden lg:block relative">
+            <div className="relative animate-float">
+              <div className="bg-white p-3 md:p-5 rounded-2xl shadow-xl rotate-3 z-20 relative">
+                <img 
+                  src="assets/indian-classroom-students.jpg" 
+                  alt="Indian students learning with teacher" 
+                  className="rounded-xl object-cover w-full h-64 md:h-80"
+                  loading="eager"
+                />
+              </div>
+              
+              <div className="absolute top-auto -bottom-12 -right-12 z-10 bg-white p-3 md:p-4 rounded-2xl shadow-lg -rotate-3 animate-float" style={{animationDelay: "0.5s"}}>
+                <img 
+                  src="assets/student-chalkboard.jpg" 
+                  alt="Student solving problem on chalkboard" 
+                  className="rounded-xl object-cover w-48 h-40"
+                  loading="eager"
+                />
+              </div>
+              
+              {/* Decorative elements */}
+              <div className="absolute -top-6 -left-6 w-12 h-12 bg-gradechamp-yellow rounded-full animate-pulse-light"></div>
+              <div className="absolute -bottom-3 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-gradechamp-softpurple rounded-full animate-pulse-light" style={{animationDelay: "1s"}}></div>
             </div>
           </div>
         </div>
       </div>
       
-      <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-white to-transparent"></div>
     </section>
   );
 });

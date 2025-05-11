@@ -1,30 +1,36 @@
+
 import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Rebecca Thompson",
+    name: "Sunita Sharma",
     role: "Parent of 7th Grader",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-    quote: "GradeChamp has transformed our evenings from homework battles to productive learning. My son now approaches math with confidence instead of dread."
+    image: "assets/parent-female-1.jpg",
+    quote: "GradeChamp has transformed our evenings from homework battles to productive learning. My son now approaches math with confidence instead of dread.",
+    rating: 5
   },
   {
-    name: "Jason Miller",
+    name: "Rajesh Kumar",
     role: "Parent of 10th Grader",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-    quote: "The personal connection my daughter has with her GradeChamp tutor has made all the difference. Her grades have improved, but more importantly, she's excited about learning again."
+    image: "assets/parent-male-1.jpg",
+    quote: "The personal connection my daughter has with her GradeChamp tutor has made all the difference. Her grades have improved, but more importantly, she's excited about learning again.",
+    rating: 5
   },
   {
-    name: "Mia Chen",
+    name: "Ananya Singh",
     role: "8th Grade Student",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
-    quote: "I used to be too embarrassed to ask questions in class. With GradeChamp, I can ask anything without feeling judged, and now I'm one of the top students in science!"
+    image: "assets/student-female-1.jpg",
+    quote: "I used to be too embarrassed to ask questions in class. With GradeChamp, I can ask anything without feeling judged, and now I'm one of the top students in science!",
+    rating: 4
   },
   {
-    name: "Raj Patel",
+    name: "Vikram Malhotra",
     role: "Parent of 6th Grader",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
-    quote: "The personalized attention at GradeChamp has helped my son develop study habits that will serve him throughout his academic journey. Worth every penny."
+    image: "assets/parent-male-2.jpg",
+    quote: "The personalized attention at GradeChamp has helped my son develop study habits that will serve him throughout his academic journey. Worth every penny.",
+    rating: 5
   }
 ];
 
@@ -36,12 +42,21 @@ const stats = [
 ];
 
 const TestimonialsSection = () => {
+  const renderStars = (rating) => {
+    return Array.from({ length: 5 }).map((_, i) => (
+      <Star 
+        key={i} 
+        className={`h-4 w-4 ${i < rating ? 'text-yellow-400 fill-yellow-400' : 'text-gray-300'}`} 
+      />
+    ));
+  };
+
   return (
-    <section id="testimonials" className="section-padding bg-gradechamp-yellow/20">
-      <div className="max-w-7xl mx-auto">
+    <section id="testimonials" className="section-padding bg-gradient-to-b from-white to-gradechamp-yellow/20">
+      <div className="content-wrapper">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Success Stories</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
+          <h2 className="section-title">Success Stories</h2>
+          <p className="section-subtitle">
             Hear from parents and students about how GradeChamp has transformed their learning experience.
           </p>
         </div>
@@ -51,18 +66,31 @@ const TestimonialsSection = () => {
             <CarouselContent>
               {testimonials.map((testimonial, index) => (
                 <CarouselItem key={index} className="md:basis-1/1">
-                  <div className="card bg-white relative p-8">
-                    <div className="absolute -top-4 -left-4 text-6xl text-gradechamp-blue opacity-30">"</div>
-                    <p className="text-gray-600 mb-6 relative z-10 text-lg">{testimonial.quote}</p>
-                    <div className="flex items-center">
-                      <img 
-                        src={testimonial.image} 
-                        alt={testimonial.name} 
-                        className="w-12 h-12 rounded-full object-cover mr-4"
-                      />
-                      <div>
-                        <h4 className="font-bold text-gray-800">{testimonial.name}</h4>
-                        <p className="text-sm text-gray-500">{testimonial.role}</p>
+                  <div className="bg-white rounded-2xl shadow-md p-8 border border-gray-100 relative">
+                    <Quote className="absolute top-6 left-6 text-6xl text-gradechamp-softpurple opacity-50" />
+                    <div className="flex flex-col md:flex-row gap-6 items-start md:items-center">
+                      <div className="mx-auto md:mx-0">
+                        <img 
+                          src={testimonial.image} 
+                          alt={testimonial.name} 
+                          className="w-24 h-24 rounded-full object-cover border-4 border-gradechamp-softpurple/30"
+                          loading="lazy"
+                          onError={(e) => {
+                            e.currentTarget.src = "assets/placeholder.svg";
+                          }}
+                        />
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center mb-2">
+                          {renderStars(testimonial.rating)}
+                        </div>
+                        <p className="text-gray-600 mb-4 text-lg relative z-10 italic">"{testimonial.quote}"</p>
+                        <div className="flex items-center">
+                          <div>
+                            <h4 className="font-bold text-gray-800">{testimonial.name}</h4>
+                            <p className="text-sm text-gradechamp-darkpurple">{testimonial.role}</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -70,17 +98,17 @@ const TestimonialsSection = () => {
               ))}
             </CarouselContent>
             <div className="hidden md:block">
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="border-gradechamp-purple text-gradechamp-purple hover:bg-gradechamp-purple hover:text-white" />
+              <CarouselNext className="border-gradechamp-purple text-gradechamp-purple hover:bg-gradechamp-purple hover:text-white" />
             </div>
           </Carousel>
         </div>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {stats.map((stat, index) => (
-            <div key={index} className="bg-white rounded-xl p-4 shadow-sm text-center">
-              <h3 className="text-3xl font-bold text-gradechamp-blue mb-1">{stat.number}</h3>
-              <p className="text-gray-600 text-sm">{stat.text}</p>
+            <div key={index} className="bg-white rounded-xl p-6 shadow-md text-center border border-gray-100 hover:border-gradechamp-purple/20 transition-all">
+              <h3 className="text-3xl font-bold gradient-text mb-2">{stat.number}</h3>
+              <p className="text-gray-600">{stat.text}</p>
             </div>
           ))}
         </div>
@@ -89,4 +117,4 @@ const TestimonialsSection = () => {
   );
 };
 
-export default TestimonialsSection;
+export default React.memo(TestimonialsSection);

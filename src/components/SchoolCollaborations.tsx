@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Button } from "@/components/ui/button";
 
 const schools = [
   {
@@ -29,13 +30,17 @@ const schools = [
 ];
 
 const SchoolCollaborations = React.memo(() => {
+  const handlePartnerInquiry = () => {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSd6ZEd1ASrDU65ypNz_BwEkPNG8nK1NViIGkC2kd_XPzZStow/viewform?usp=sharing', '_blank');
+  };
+
   return (
     <section className="section-padding bg-gradechamp-softpurple/10">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-8">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Partner Schools</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-6">
-            GradeChamp partners with leading CBSE and State Board schools to enhance student learning outcomes.
+      <div className="content-wrapper">
+        <div className="text-center mb-10">
+          <h2 className="section-title">Our School Partners</h2>
+          <p className="section-subtitle">
+            GradeChamp partners with leading CBSE and State Board schools to enhance student learning outcomes across India.
           </p>
         </div>
 
@@ -43,24 +48,38 @@ const SchoolCollaborations = React.memo(() => {
           {schools.map((school, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow"
+              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all border border-gray-100 hover:border-gradechamp-purple/20"
             >
-              <div className="mb-4 aspect-video rounded-lg overflow-hidden">
+              <div className="aspect-video overflow-hidden">
                 <img 
                   src={school.image}
                   alt={`${school.name} campus`}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   loading="lazy"
                   onError={(e) => {
                     e.currentTarget.src = "assets/placeholder.svg";
                   }}
                 />
               </div>
-              <h3 className="text-xl font-bold text-center mb-2">{school.name}</h3>
-              <p className="text-gray-600 text-center mb-1">{school.location}</p>
-              <p className="text-gradechamp-blue text-sm text-center">{school.students}</p>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-center mb-2">{school.name}</h3>
+                <p className="text-gray-600 text-center mb-1">{school.location}</p>
+                <p className="text-gradechamp-purple text-sm text-center font-medium">{school.students}</p>
+              </div>
             </div>
           ))}
+        </div>
+
+        <div className="mt-10 text-center">
+          <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
+            Are you a school administrator interested in partnering with GradeChamp to provide supplemental learning for your students?
+          </p>
+          <Button 
+            onClick={handlePartnerInquiry}
+            className="bg-white border-2 border-gradechamp-purple text-gradechamp-purple hover:bg-gradechamp-purple hover:text-white transition-colors shadow-md"
+          >
+            Inquire About School Partnerships
+          </Button>
         </div>
       </div>
     </section>

@@ -99,11 +99,15 @@
   h1, h2, h3, h4, h5, h6 {
     @apply font-heading;
   }
+  
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 @layer components {
   .btn-primary {
-    @apply bg-gradechamp-blue text-white rounded-full px-6 py-3 font-medium hover:bg-gradechamp-lightblue transition-colors shadow-md hover:shadow-lg;
+    @apply bg-gradechamp-purple text-white rounded-full px-6 py-3 font-medium hover:bg-gradechamp-darkpurple transition-colors shadow-md hover:shadow-lg;
   }
   
   .section-padding {
@@ -116,5 +120,29 @@
   
   .badge {
     @apply inline-flex items-center rounded-full bg-gradechamp-yellow px-3 py-1 text-sm font-medium;
+  }
+
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-gradechamp-purple to-gradechamp-blue;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold mb-4;
+  }
+
+  .section-subtitle {
+    @apply text-gray-600 max-w-2xl mx-auto mb-8;
+  }
+
+  .content-wrapper {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .img-hover-zoom {
+    @apply overflow-hidden;
+  }
+
+  .img-hover-zoom img {
+    @apply transition-transform duration-300 ease-in-out hover:scale-105;
   }
 }

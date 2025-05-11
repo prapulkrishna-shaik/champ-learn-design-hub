@@ -1,85 +1,118 @@
+
 import React from 'react';
-import { BookUser } from "lucide-react";
+import { BookUser, Star } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const tutors = [
   {
-    name: "Emily Johnson",
+    name: "Radhika Sharma",
     subjects: "Mathematics",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80",
-    bio: "Emily believes in making math approachable through real-world examples. Her students say she turns math anxiety into math confidence.",
-    philosophy: "Learning happens when students feel safe to make mistakes."
+    image: "assets/tutor-female-1.jpg",
+    bio: "With 8+ years of teaching experience, Radhika makes math approachable through real-world examples and personalized learning plans.",
+    philosophy: "Learning happens when students feel safe to make mistakes.",
+    rating: 4.9
   },
   {
-    name: "David Chen",
+    name: "Arjun Patel",
     subjects: "Science",
-    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e",
-    bio: "David makes complex scientific concepts tangible through hands-on experiments and everyday examples.",
-    philosophy: "Curiosity is the foundation of all scientific discovery."
+    image: "assets/tutor-male-1.jpg",
+    bio: "Arjun has helped over 200 students master science concepts through hands-on experiments and clear explanations.",
+    philosophy: "Curiosity is the foundation of all scientific discovery.",
+    rating: 4.8
   },
   {
-    name: "Sarah Williams",
-    subjects: "English Literature",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330",
-    bio: "Sarah helps students find their voice through writing and builds confidence in even the most reluctant readers.",
-    philosophy: "Every student has a unique voice waiting to be discovered."
+    name: "Priya Verma",
+    subjects: "English & Social Studies",
+    image: "assets/tutor-female-2.jpg",
+    bio: "Priya helps students find their voice through engaging discussions and builds confidence in even the most reluctant learners.",
+    philosophy: "Every student has a unique voice waiting to be discovered.",
+    rating: 4.9
   },
   {
-    name: "Michael Rodriguez",
-    subjects: "Computer Science",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d",
-    bio: "Michael transforms coding from intimidating to exciting by focusing on creative projects that students care about.",
-    philosophy: "Technology should be a tool for creativity, not just consumption."
+    name: "Vikram Singh",
+    subjects: "Chemistry & Physics",
+    image: "assets/tutor-male-2.jpg",
+    bio: "Vikram transforms complex concepts into simple, understandable lessons using visual aids and interactive demonstrations.",
+    philosophy: "Understanding the 'why' is as important as knowing the 'how'.",
+    rating: 4.7
   }
 ];
 
 const TutorsSection = () => {
+  const handleViewAllTutors = () => {
+    // In a real implementation, this would navigate to a tutors page
+    console.log("View all tutors clicked");
+  };
+  
+  const handleBookTrial = () => {
+    window.open('https://docs.google.com/forms/d/e/1FAIpQLSd6ZEd1ASrDU65ypNz_BwEkPNG8nK1NViIGkC2kd_XPzZStow/viewform?usp=sharing', '_blank');
+  };
+
   return (
-    <section id="tutors" className="section-padding bg-gradechamp-green/30">
-      <div className="max-w-7xl mx-auto">
+    <section id="tutors" className="section-padding bg-gradient-to-b from-gradechamp-softpurple/20 to-white">
+      <div className="content-wrapper">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">Meet Our Tutors</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            Our tutors are not just subject experts but mentors who connect personally with students, understanding their unique learning needs.
+          <h2 className="section-title">Learn From Expert Mentors</h2>
+          <p className="section-subtitle">
+            Our tutors are not just subject experts but mentors who understand your child's unique learning needs and aspirations.
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {tutors.map((tutor, index) => (
-            <div key={index} className="card bg-white flex flex-col items-center text-center">
-              <div className="mb-4">
+            <div key={index} className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:border-gradechamp-purple/30 transition-all hover:shadow-lg group">
+              <div className="relative overflow-hidden h-48">
                 <img 
                   src={tutor.image} 
                   alt={tutor.name} 
-                  className="w-28 h-28 rounded-full object-cover border-4 border-gradechamp-blue/20"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  loading="lazy"
+                  onError={(e) => {
+                    e.currentTarget.src = "assets/placeholder.svg";
+                  }}
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
+                  <div className="p-4 w-full">
+                    <div className="flex items-center text-white">
+                      <Star className="h-4 w-4 text-yellow-400 mr-1" />
+                      <span className="font-medium">{tutor.rating}</span>
+                      <span className="text-xs ml-1 text-gray-200">/5</span>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-bold mb-1">{tutor.name}</h3>
-              <div className="bg-gradechamp-green/20 text-gray-700 rounded-full px-3 py-1 text-sm mb-3 inline-flex items-center">
-                <BookUser className="h-3 w-3 mr-1" />
-                {tutor.subjects}
-              </div>
-              <p className="text-gray-600 text-sm mb-3">{tutor.bio}</p>
-              <div className="mt-auto pt-3 border-t border-gray-100 w-full">
-                <p className="text-sm italic text-gradechamp-blue">"{tutor.philosophy}"</p>
+              
+              <div className="p-5">
+                <h3 className="text-xl font-bold mb-1">{tutor.name}</h3>
+                <div className="inline-flex items-center bg-gradechamp-softpurple/30 text-gradechamp-darkpurple rounded-full px-3 py-1 text-sm mb-3">
+                  <BookUser className="h-3 w-3 mr-1" />
+                  {tutor.subjects}
+                </div>
+                <p className="text-gray-600 text-sm mb-3 line-clamp-2">{tutor.bio}</p>
+                <div className="pt-3 border-t border-gray-100">
+                  <p className="text-sm italic text-gradechamp-purple">"<span className="font-medium">{tutor.philosophy}</span>"</p>
+                </div>
               </div>
             </div>
           ))}
         </div>
         
-        <div className="text-center mt-12">
+        <div className="mt-12 text-center">
           <p className="text-gray-600 mb-6">
             All our tutors undergo rigorous selection, background checks, and training in both academic expertise and mentorship skills.
           </p>
-          <a href="#" className="text-gradechamp-blue hover:underline font-medium inline-flex items-center">
-            View All Tutors
-            <svg className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button onClick={handleViewAllTutors} variant="outline" className="border-2 border-gradechamp-purple text-gradechamp-purple hover:bg-gradechamp-purple hover:text-white transition-colors duration-300">
+              View All Tutors
+            </Button>
+            <Button onClick={handleBookTrial} className="btn-primary">
+              Book a Trial Session
+            </Button>
+          </div>
         </div>
       </div>
     </section>
   );
 };
 
-export default TutorsSection;
+export default React.memo(TutorsSection);

@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/carousel";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Play } from "lucide-react";
+import { Play, ArrowRight } from "lucide-react";
 
 interface Slide {
   image: string;
@@ -30,13 +30,13 @@ const slides: Slide[] = [
   },
   {
     image: "assets/student-chalkboard.jpg",
-    title: "Advanced Technology",
-    description: "Using modern tools to enhance the learning experience"
+    title: "Advanced Teaching Methods",
+    description: "Using modern pedagogical approaches to enhance understanding"
   },
   {
     image: "assets/students-group-study.jpg",
-    title: "Focused Learning",
-    description: "Creating the perfect environment for academic growth"
+    title: "Focused Environment",
+    description: "Creating the perfect setting for academic growth and development"
   }
 ];
 
@@ -50,63 +50,63 @@ const WorkShowcase: React.FC = React.memo(() => {
   }, []);
 
   return (
-    <section className="section-padding bg-gradient-to-b from-white to-gradechamp-yellow/20">
-      <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
-          Our Impact in Action
-        </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto text-center mb-8">
-          Take a look at how we're transforming education through personalized learning
+    <section className="section-padding bg-gradient-to-b from-gradechamp-yellow/20 to-white">
+      <div className="content-wrapper">
+        <h2 className="section-title text-center">How GradeChamp Works</h2>
+        <p className="section-subtitle text-center">
+          See how we're transforming education through personalized learning and expert mentorship
         </p>
         
-        <div className="relative px-12 mb-16">
+        <div className="relative px-4 md:px-12 mb-16">
           <Carousel className="w-full">
             <CarouselContent>
               {slides.map((slide, index) => (
-                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                  <Card className="h-full hover:shadow-xl transition-shadow duration-300">
+                <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3 pl-4 md:pl-6">
+                  <Card className="h-full border border-gray-100 hover:border-gradechamp-purple/20 transition-all overflow-hidden rounded-xl">
                     <div className="relative aspect-video overflow-hidden">
                       <img
                         src={slide.image}
                         alt={slide.title}
-                        className="object-cover w-full h-full transition-transform duration-300 hover:scale-105"
+                        className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
                         loading="lazy"
                         onError={(e) => {
-                          // Fallback in case image fails to load
                           e.currentTarget.src = "assets/placeholder.svg";
                         }}
                       />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
+                        <div className="p-4 md:p-6 w-full">
+                          <h3 className="text-xl font-bold text-white">{slide.title}</h3>
+                        </div>
+                      </div>
                     </div>
-                    <CardContent className="p-4">
-                      <h3 className="text-xl font-semibold mb-2 text-gradechamp-blue">{slide.title}</h3>
+                    <CardContent className="p-4 md:p-6">
                       <p className="text-gray-600">{slide.description}</p>
                     </CardContent>
                   </Card>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
+            <CarouselPrevious className="border-gradechamp-purple text-gradechamp-purple hover:bg-gradechamp-purple hover:text-white" />
+            <CarouselNext className="border-gradechamp-purple text-gradechamp-purple hover:bg-gradechamp-purple hover:text-white" />
           </Carousel>
         </div>
 
-        <div className="flex justify-center gap-4 mb-12">
-          <Button onClick={handleBookClass} className="btn-primary">
-            Book a Free Class
+        <div className="flex flex-col md:flex-row justify-center items-center gap-6 mb-12">
+          <Button onClick={handleBookClass} className="btn-primary text-lg group relative overflow-hidden w-full md:w-auto">
+            <span className="relative z-10 flex items-center">
+              Book a Free Demo Class 
+              <ArrowRight className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+            </span>
           </Button>
           <Button 
             variant="outline" 
             onClick={handleWatchVideo} 
-            className="border-2 border-gradechamp-blue rounded-full text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white transition-colors shadow-sm text-lg inline-flex items-center"
+            className="border-2 border-gradechamp-purple rounded-full text-gradechamp-purple hover:bg-gradechamp-purple hover:text-white transition-colors shadow-sm text-lg flex items-center w-full md:w-auto justify-center"
           >
             <Play className="mr-2 h-4 w-4" />
-            See How It Works
+            Watch How It Works
           </Button>
         </div>
-      </div>
-      
-      <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white shadow-lg border-t border-gray-200 p-4 z-50">
-        <Button onClick={handleBookClass} className="btn-primary w-full">Book a Free Class</Button>
       </div>
     </section>
   );

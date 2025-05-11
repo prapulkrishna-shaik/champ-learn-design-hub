@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { Link } from 'react-router-dom';
 import WhatsAppContact from './WhatsAppContact';
 
@@ -11,7 +11,7 @@ const Navbar = () => {
   
   // Optimize scroll handler with useCallback
   const handleScroll = useCallback(() => {
-    setIsScrolled(window.scrollY > 10);
+    setIsScrolled(window.scrollY > 20);
   }, []);
   
   useEffect(() => {
@@ -26,35 +26,37 @@ const Navbar = () => {
   };
 
   return (
-    <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white shadow-sm' : 'bg-transparent'}`}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+    <nav className={`sticky top-0 z-50 transition-all duration-300 ${isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-sm' : 'bg-transparent'}`}>
+      <div className="content-wrapper">
+        <div className="flex justify-between h-20 items-center">
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center gap-2">
               <img 
                 src="/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png" 
                 alt="GradeChamp Logo" 
-                className="h-8 w-auto"
+                className="h-10 w-auto"
                 loading="eager"
               />
-              <span className="text-2xl font-bold text-gradechamp-blue font-heading">Grade<span className="text-gradechamp-lightblue">Champ</span></span>
+              <span className="text-2xl font-bold gradient-text font-heading hidden sm:inline-block">GradeChamp</span>
             </Link>
           </div>
           
-          <div className="hidden md:flex items-center space-x-8">
-            <Link to="/about" className="text-gray-700 hover:text-gradechamp-blue transition-colors">About Us</Link>
-            <Link to="/curriculum" className="text-gray-700 hover:text-gradechamp-blue transition-colors">Curriculum</Link>
-            <Link to="/approach" className="text-gray-700 hover:text-gradechamp-blue transition-colors">Our Approach</Link>
-            <Link to="/teams" className="text-gray-700 hover:text-gradechamp-blue transition-colors">Our Team</Link>
-            <WhatsAppContact variant="outline" text="Contact Us" />
-            <Button onClick={handleBookClass} className="btn-primary">Book a Free Class</Button>
+          <div className="hidden lg:flex items-center space-x-1">
+            <NavItem to="/about" label="About Us" />
+            <NavItem to="/curriculum" label="Curriculum" />
+            <NavItem to="/approach" label="Our Approach" />
+            <NavItem to="/teams" label="Our Team" />
+            <WhatsAppContact variant="outline" text="Contact Us" className="ml-2" />
+            <Button onClick={handleBookClass} className="btn-primary ml-2">Book a Free Class</Button>
           </div>
           
-          <div className="md:hidden flex items-center">
+          <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:bg-gray-100 focus:outline-none"
+              aria-expanded={isMenuOpen}
             >
+              <span className="sr-only">{isMenuOpen ? 'Close menu' : 'Open menu'}</span>
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
@@ -62,20 +64,49 @@ const Navbar = () => {
       </div>
       
       {isMenuOpen && (
-        <div className="md:hidden bg-white shadow-lg">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <Link to="/about" className="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100">About Us</Link>
-            <Link to="/curriculum" className="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100">Curriculum</Link>
-            <Link to="/approach" className="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100">Our Approach</Link>
-            <Link to="/teams" className="block px-3 py-2 rounded-md text-gray-700 hover:bg-gray-100">Our Team</Link>
-            <div className="px-3 py-2">
-              <Button onClick={handleBookClass} className="btn-primary w-full mb-2">Book a Free Class</Button>
+        <div className="lg:hidden bg-white/95 backdrop-blur-sm shadow-lg">
+          <div className="px-4 pt-2 pb-4 space-y-2">
+            <MobileNavItem to="/about" label="About Us" onClick={() => setIsMenuOpen(false)} />
+            <MobileNavItem to="/curriculum" label="Curriculum" onClick={() => setIsMenuOpen(false)} />
+            <MobileNavItem to="/approach" label="Our Approach" onClick={() => setIsMenuOpen(false)} />
+            <MobileNavItem to="/teams" label="Our Team" onClick={() => setIsMenuOpen(false)} />
+            <div className="pt-2 flex flex-col space-y-3">
+              <Button onClick={handleBookClass} className="btn-primary w-full">Book a Free Class</Button>
               <WhatsAppContact variant="outline" text="Contact Us" fullWidth={true} />
             </div>
           </div>
         </div>
       )}
     </nav>
+  );
+};
+
+// Desktop navigation item
+const NavItem = ({ to, label, hasDrop = false }) => {
+  return (
+    <Link 
+      to={to} 
+      className="relative px-3 py-2 text-gray-700 hover:text-gradechamp-purple transition-colors group"
+    >
+      <span className="flex items-center">
+        {label}
+        {hasDrop && <ChevronDown className="ml-1 h-4 w-4" />}
+      </span>
+      <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradechamp-purple scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></span>
+    </Link>
+  );
+};
+
+// Mobile navigation item
+const MobileNavItem = ({ to, label, onClick }) => {
+  return (
+    <Link 
+      to={to} 
+      className="block px-4 py-3 rounded-lg text-gray-700 hover:bg-gradechamp-softpurple/20 hover:text-gradechamp-purple transition-colors"
+      onClick={onClick}
+    >
+      {label}
+    </Link>
   );
 };
 
