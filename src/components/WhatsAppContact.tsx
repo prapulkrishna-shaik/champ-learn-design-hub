@@ -31,7 +31,7 @@ const WhatsAppContact: React.FC<WhatsAppContactProps> = ({
       className={`${fullWidth ? 'w-full' : ''} border-2 border-gradechamp-blue text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white rounded-full transition-colors ${className}`}
     >
       <img 
-        src="images/whatsapp-icon.svg" 
+        src="/images/whatsapp-icon.svg" 
         alt="WhatsApp" 
         className="mr-2 h-4 w-4" 
         onError={(e) => {

@@ -7,7 +7,7 @@ const tutors = [
   {
     name: "Radhika Sharma",
     subjects: "Mathematics",
-    image: "assets/tutor-female-1.jpg",
+    image: "/images/tutor-female-1.jpg",
     bio: "With 8+ years of teaching experience, Radhika makes math approachable through real-world examples and personalized learning plans.",
     philosophy: "Learning happens when students feel safe to make mistakes.",
     rating: 4.9
@@ -15,7 +15,7 @@ const tutors = [
   {
     name: "Arjun Patel",
     subjects: "Science",
-    image: "assets/tutor-male-1.jpg",
+    image: "/images/tutor-male-1.jpg",
     bio: "Arjun has helped over 200 students master science concepts through hands-on experiments and clear explanations.",
     philosophy: "Curiosity is the foundation of all scientific discovery.",
     rating: 4.8
@@ -23,7 +23,7 @@ const tutors = [
   {
     name: "Priya Verma",
     subjects: "English & Social Studies",
-    image: "assets/tutor-female-2.jpg",
+    image: "/images/tutor-female-2.jpg",
     bio: "Priya helps students find their voice through engaging discussions and builds confidence in even the most reluctant learners.",
     philosophy: "Every student has a unique voice waiting to be discovered.",
     rating: 4.9
@@ -31,7 +31,7 @@ const tutors = [
   {
     name: "Vikram Singh",
     subjects: "Chemistry & Physics",
-    image: "assets/tutor-male-2.jpg",
+    image: "/images/tutor-male-2.jpg",
     bio: "Vikram transforms complex concepts into simple, understandable lessons using visual aids and interactive demonstrations.",
     philosophy: "Understanding the 'why' is as important as knowing the 'how'.",
     rating: 4.7
@@ -68,7 +68,7 @@ const TutorsSection = () => {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   loading="lazy"
                   onError={(e) => {
-                    e.currentTarget.src = "assets/placeholder.svg";
+                    e.currentTarget.src = "/images/placeholder.svg";
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
