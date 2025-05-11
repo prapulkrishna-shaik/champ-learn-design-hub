@@ -7,25 +7,25 @@ const schools = [
     name: "Delhi Public School",
     location: "New Delhi",
     students: "250+ students enrolled",
-    image: "/images/cbse-school-delhi.jpg"
+    image: "images/cbse-school-delhi.jpg"
   },
   {
     name: "Ryan International School",
     location: "Mumbai",
     students: "180+ students enrolled",
-    image: "/images/ryan-school-mumbai.jpg"
+    image: "images/ryan-school-mumbai.jpg"
   },
   {
     name: "St. Xavier's School",
     location: "Bangalore",
     students: "200+ students enrolled",
-    image: "/images/st-xaviers-school.jpg"
+    image: "images/st-xaviers-school.jpg"
   },
   {
     name: "DAV Public School",
     location: "Chennai",
     students: "150+ students enrolled",
-    image: "/images/dav-school-chennai.jpg"
+    image: "images/dav-school-chennai.jpg"
   }
 ];
 
@@ -57,7 +57,7 @@ const SchoolCollaborations = React.memo(() => {
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   loading="lazy"
                   onError={(e) => {
-                    e.currentTarget.src = "/images/placeholder.svg";
+                    e.currentTarget.src = "images/placeholder.svg";
                   }}
                 />
               </div>
