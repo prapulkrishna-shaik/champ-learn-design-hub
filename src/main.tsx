@@ -17,16 +17,17 @@ const root = createRoot(container);
 // Use a more performant approach with concurrent features
 // Preload critical resources
 const preloadAssets = () => {
-  // Define Indian teaching and school related images for preloading
+  // Define GradeChamp logo and images for preloading
   const criticalImages = [
+    '/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png', // GradeChamp logo
+    '/images/whatsapp-icon.svg',
     '/images/indian-classroom-students.jpg',
     '/images/indian-student-chalkboard.jpg',
     '/images/classroom-learning.jpg',
     '/images/students-interactive-session.jpg',
     '/images/students-group-study.jpg',
     '/images/student-chalkboard.jpg',
-    '/images/placeholder.svg',
-    '/images/whatsapp-icon.svg'
+    '/images/placeholder.svg'
   ];
   
   // Preload all critical images

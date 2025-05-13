@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Star, Quote } from "lucide-react";
@@ -7,28 +6,28 @@ const testimonials = [
   {
     name: "Sunita Sharma",
     role: "Parent of 7th Grader",
-    image: "/images/parent-female-1.jpg",
+    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
     quote: "GradeChamp has transformed our evenings from homework battles to productive learning. My son now approaches math with confidence instead of dread.",
     rating: 5
   },
   {
     name: "Rajesh Kumar",
     role: "Parent of 10th Grader",
-    image: "/images/parent-male-1.jpg",
+    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
     quote: "The personal connection my daughter has with her GradeChamp tutor has made all the difference. Her grades have improved, but more importantly, she's excited about learning again.",
     rating: 5
   },
   {
     name: "Ananya Singh",
     role: "8th Grade Student",
-    image: "/images/student-female-1.jpg",
+    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
     quote: "I used to be too embarrassed to ask questions in class. With GradeChamp, I can ask anything without feeling judged, and now I'm one of the top students in science!",
     rating: 4
   },
   {
     name: "Vikram Malhotra",
     role: "Parent of 6th Grader",
-    image: "/images/parent-male-2.jpg",
+    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
     quote: "The personalized attention at GradeChamp has helped my son develop study habits that will serve him throughout his academic journey. Worth every penny.",
     rating: 5
   }
@@ -75,9 +74,6 @@ const TestimonialsSection = () => {
                           alt={testimonial.name} 
                           className="w-24 h-24 rounded-full object-cover border-4 border-gradechamp-softpurple/30"
                           loading="lazy"
-                          onError={(e) => {
-                            e.currentTarget.src = "/images/placeholder.svg";
-                          }}
                         />
                       </div>
                       <div className="flex-1">

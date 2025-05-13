@@ -1,4 +1,3 @@
-
 import React, { useCallback } from 'react';
 import {
   Carousel,
@@ -19,22 +18,22 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: "/images/classroom-learning.jpg",
+    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
     title: "One-on-One Learning",
     description: "Personalized attention tailored to each student's unique learning needs"
   },
   {
-    image: "/images/students-interactive-session.jpg",
+    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
     title: "Interactive Sessions",
     description: "Engaging learning experiences with real-time problem solving"
   },
   {
-    image: "/images/student-chalkboard.jpg",
+    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
     title: "Advanced Teaching Methods",
     description: "Using modern pedagogical approaches to enhance understanding"
   },
   {
-    image: "/images/students-group-study.jpg",
+    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
     title: "Focused Environment",
     description: "Creating the perfect setting for academic growth and development"
   }
@@ -69,9 +68,6 @@ const WorkShowcase: React.FC = React.memo(() => {
                         alt={slide.title}
                         className="object-cover w-full h-full transition-transform duration-500 hover:scale-105"
                         loading="lazy"
-                        onError={(e) => {
-                          e.currentTarget.src = "/images/placeholder.svg";
-                        }}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
                         <div className="p-4 md:p-6 w-full">

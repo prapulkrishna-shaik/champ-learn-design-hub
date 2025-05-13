@@ -62,8 +62,8 @@ const Hero = React.memo(() => {
             <div className="relative animate-float">
               <div className="bg-white p-3 md:p-5 rounded-2xl shadow-xl rotate-3 z-20 relative">
                 <img 
-                  src="/images/indian-classroom-students.jpg" 
-                  alt="Indian students learning with teacher" 
+                  src="/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png" 
+                  alt="GradeChamp Logo" 
                   className="rounded-xl object-cover w-full h-64 md:h-80"
                   loading="eager"
                 />
@@ -71,8 +71,8 @@ const Hero = React.memo(() => {
               
               <div className="absolute top-auto -bottom-12 -right-12 z-10 bg-white p-3 md:p-4 rounded-2xl shadow-lg -rotate-3 animate-float" style={{animationDelay: "0.5s"}}>
                 <img 
-                  src="/images/student-chalkboard.jpg" 
-                  alt="Student solving problem on chalkboard" 
+                  src="/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png" 
+                  alt="GradeChamp Logo" 
                   className="rounded-xl object-cover w-48 h-40"
                   loading="eager"
                 />

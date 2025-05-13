@@ -27,7 +27,7 @@ const Footer = () => {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <img 
-                src="images/school-icon.png" 
+                src="/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png" 
                 alt="GradeChamp Logo" 
                 className="h-8 w-auto"
                 loading="lazy"
@@ -109,11 +109,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <img 
-                  src="images/whatsapp-icon.svg" 
+                  src="/images/whatsapp-icon.svg" 
                   alt="WhatsApp" 
                   className="h-5 w-5 mr-2 text-gradechamp-blue"
                   onError={(e) => {
-                    e.currentTarget.src = "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiIGNsYXNzPSJsdWNpZGUgbHVjaWRlLW1lc3NhZ2Utc3F1YXJlIj48cGF0aCBkPSJNMTQgOWE0IDQgMCAwIDEtOCAwTTUgMTVoMTRNMyA1LjVBLjUuNSAwIDAgMSAzLjUgNWgxN2EuNS41IDAgMCAxIC41LjV2MTNhLjUuNSAwIDAgMS0uNS41aC0xN2EuNS41IDAgMCAxLS41LS41di0xM1oiLz48L3N2Zz4=";
+                    e.currentTarget.src = "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png";
                   }}
                 />
                 <a href="https://wa.me/918555974274" target="_blank" rel="noopener noreferrer">+91 85559 74274</a>
