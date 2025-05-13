@@ -19,6 +19,8 @@ const root = createRoot(container);
 const preloadAssets = () => {
   // Define GradeChamp logo and images for preloading
   const criticalImages = [
+    '/favicons/favicon.png', // Primary favicon
+    '/favicons/favicon.svg', // SVG favicon
     '/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png', // GradeChamp logo
     '/images/whatsapp-icon.svg',
     '/images/indian-classroom-students.jpg',
