@@ -23,6 +23,9 @@ const WhatsAppContact: React.FC<WhatsAppContactProps> = ({
     window.open(`https://wa.me/${phoneNumber}`, '_blank');
   };
 
+  // The path to the GradeChamp logo
+  const gradechampLogo = "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png";
+
   return (
     <Button
       variant={variant}
@@ -31,13 +34,9 @@ const WhatsAppContact: React.FC<WhatsAppContactProps> = ({
       className={`${fullWidth ? 'w-full' : ''} border-2 border-gradechamp-blue text-gradechamp-blue hover:bg-gradechamp-blue hover:text-white rounded-full transition-colors ${className}`}
     >
       <img 
-        src="/images/whatsapp-icon.svg" 
+        src={gradechampLogo} 
         alt="WhatsApp" 
         className="mr-2 h-4 w-4" 
-        onError={(e) => {
-          // If WhatsApp icon fails, use GradeChamp logo as fallback
-          e.currentTarget.src = "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png";
-        }}
       />
       {text}
     </Button>
