@@ -1,4 +1,3 @@
-
 import React, { useCallback } from 'react';
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Play } from "lucide-react";
@@ -9,7 +8,7 @@ const Hero = React.memo(() => {
   }, []);
 
   const handleVideoPlay = useCallback(() => {
-    window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');
+    window.open('https://drive.google.com/file/d/1K5l8nziszocoxTu3vQH5nnGLNxk9eLg_/view?usp=sharing', '_blank');
   }, []);
 
   return (
