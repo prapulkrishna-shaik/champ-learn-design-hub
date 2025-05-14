@@ -7,7 +7,7 @@ const schools = [
     name: "Delhi Public School",
     location: "New Delhi",
     students: "250+ students enrolled",
-    image: "/favicons/favicon.png"
+    image: "https://www.dpsmathuraroad.net/images/school_building.jpg"
   },
   {
     name: "Ryan International School",
