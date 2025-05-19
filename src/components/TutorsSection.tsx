@@ -7,7 +7,7 @@ const tutors = [
   {
     name: "Radhika Sharma",
     subjects: "Mathematics",
-    image: "https://drive.google.com/uc?export=view&id=15WeN6kcbc3ugmX7jz2sT_TqyiYp5VBQ3",
+    image: "https://drive.google.com/file/d/1eUGcOMQp6hUl_LkzSaUGl5WP_JWeAdw8/view?usp=sharing",
     bio: "With 8+ years of teaching experience, Radhika makes math approachable through real-world examples and personalized learning plans.",
     philosophy: "Learning happens when students feel safe to make mistakes.",
     rating: 4.9
