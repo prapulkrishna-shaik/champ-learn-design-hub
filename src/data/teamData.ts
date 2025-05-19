@@ -1,4 +1,4 @@
-
+import sreeImage from './sree.jpg';
 interface TeamMember {
   name: string;
   role: string;
@@ -10,7 +10,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Sarah Johnson",
     role: "Lead Mathematics Tutor",
-    image: "https://drive.google.com/uc?id=1eUGcOMQp6hUl_LkzSaUGl5WP_JWeAdw8",
+    image:sreeImage ,
     description: "Experienced mathematics educator with 8+ years of teaching excellence."
   },
   {
