@@ -1,4 +1,7 @@
 import sreeImage from './sree.jpg';
+import subhaniImage from './SUBHANI.jpg';
+import yaswanthImage from './YASWANTH.jpg';
+import abajithImage from './abajith.jpg';
 interface TeamMember {
   name: string;
   role: string;
@@ -16,19 +19,19 @@ export const teamMembers: TeamMember[] = [
   {
     name: "David Chen",
     role: "Science Specialist",
-    image: "https://drive.google.com/uc?export=view&id=1eUGcOMQp6hUl_LkzSaUGl5WP_JWeAdw8",
+    image: subhaniImage,
     description: "Expert in Physics and Chemistry with innovative teaching approaches."
   },
   {
     name: "Priya Patel",
     role: "Academic Coordinator",
-    image: "https://drive.google.com/uc?export=view&id=15WeN6kcbc3ugmX7jz2sT_TqyiYp5VBQ3",
+    image: yaswanthImage,
     description: "Coordinates curriculum development and student progress tracking."
   },
   {
     name: "Michael Ross",
     role: "Technology Integration Specialist",
-    image: "https://drive.google.com/uc?export=view&id=1iBtgBltTMhNhvxPoiKEzOI-AmSQf9Raz",
+    image: abajithImage,
     description: "Ensures seamless integration of technology in online learning."
   }
 ];
