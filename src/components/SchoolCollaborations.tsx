@@ -7,25 +7,25 @@ const schools = [
     name: "Delhi Public School",
     location: "New Delhi",
     students: "250+ students enrolled",
-    image: "https://www.dpsmathuraroad.net/images/school_building.jpg"
+    image: "https://drive.google.com/uc?export=view&id=19Bp26hbTuUrTcTe6Vfe89y_VU06Z_CxK"
   },
   {
     name: "Ryan International School",
     location: "Mumbai",
     students: "180+ students enrolled",
-    image: "/favicons/favicon.png"
+    image: "https://drive.google.com/uc?export=view&id=1DelHbpX0nyUw97F2btgou1aiMGIk4fU8"
   },
   {
     name: "St. Xavier's School",
     location: "Bangalore",
     students: "200+ students enrolled",
-    image: "/favicons/favicon.png"
+    image: "https://drive.google.com/uc?export=view&id=1Z1Vv6xNO-YWV83fGEzwp5tsXB1urLCnu"
   },
   {
     name: "DAV Public School",
     location: "Chennai",
     students: "150+ students enrolled",
-    image: "/favicons/favicon.png"
+    image: "https://drive.google.com/uc?export=view&id=1iBtgBltTMhNhvxPoiKEzOI-AmSQf9Raz"
   }
 ];
 

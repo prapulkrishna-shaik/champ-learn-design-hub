@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { BookUser, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,7 +7,7 @@ const tutors = [
   {
     name: "Radhika Sharma",
     subjects: "Mathematics",
-    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
+    image: "https://drive.google.com/uc?export=view&id=15WeN6kcbc3ugmX7jz2sT_TqyiYp5VBQ3",
     bio: "With 8+ years of teaching experience, Radhika makes math approachable through real-world examples and personalized learning plans.",
     philosophy: "Learning happens when students feel safe to make mistakes.",
     rating: 4.9
@@ -14,7 +15,7 @@ const tutors = [
   {
     name: "Arjun Patel",
     subjects: "Science",
-    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
+    image: "https://drive.google.com/uc?export=view&id=19Bp26hbTuUrTcTe6Vfe89y_VU06Z_CxK",
     bio: "Arjun has helped over 200 students master science concepts through hands-on experiments and clear explanations.",
     philosophy: "Curiosity is the foundation of all scientific discovery.",
     rating: 4.8
@@ -22,7 +23,7 @@ const tutors = [
   {
     name: "Priya Verma",
     subjects: "English & Social Studies",
-    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
+    image: "https://drive.google.com/uc?export=view&id=1DelHbpX0nyUw97F2btgou1aiMGIk4fU8",
     bio: "Priya helps students find their voice through engaging discussions and builds confidence in even the most reluctant learners.",
     philosophy: "Every student has a unique voice waiting to be discovered.",
     rating: 4.9
@@ -30,7 +31,7 @@ const tutors = [
   {
     name: "Vikram Singh",
     subjects: "Chemistry & Physics",
-    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
+    image: "https://drive.google.com/uc?export=view&id=1Z1Vv6xNO-YWV83fGEzwp5tsXB1urLCnu",
     bio: "Vikram transforms complex concepts into simple, understandable lessons using visual aids and interactive demonstrations.",
     philosophy: "Understanding the 'why' is as important as knowing the 'how'.",
     rating: 4.7
