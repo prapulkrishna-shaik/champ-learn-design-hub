@@ -10,7 +10,7 @@ export const teamMembers: TeamMember[] = [
   {
     name: "Sarah Johnson",
     role: "Lead Mathematics Tutor",
-    image: "https://drive.google.com/uc?export=view&id=1Z1Vv6xNO-YWV83fGEzwp5tsXB1urLCnu",
+    image: "https://drive.google.com/uc?id=1eUGcOMQp6hUl_LkzSaUGl5WP_JWeAdw8",
     description: "Experienced mathematics educator with 8+ years of teaching excellence."
   },
   {
