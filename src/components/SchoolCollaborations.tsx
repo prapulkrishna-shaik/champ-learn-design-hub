@@ -7,25 +7,25 @@ const schools = [
     name: "Delhi Public School",
     location: "New Delhi",
     students: "250+ students enrolled",
-    image: "https://drive.google.com/uc?export=view&id=19Bp26hbTuUrTcTe6Vfe89y_VU06Z_CxK"
+    image: "https://th.bing.com/th/id/OIP.2lkS4bJX89KequJuBDi8-AHaD5?cb=iwc2&rs=1&pid=ImgDetMain"
   },
   {
     name: "Ryan International School",
     location: "Mumbai",
     students: "180+ students enrolled",
-    image: "https://drive.google.com/uc?export=view&id=1DelHbpX0nyUw97F2btgou1aiMGIk4fU8"
+    image: "https://th.bing.com/th/id/OIP.IzkO0lgxo6KKtSH0PxvyngHaHa?cb=iwc2&rs=1&pid=ImgDetMain"
   },
   {
     name: "St. Xavier's School",
     location: "Bangalore",
     students: "200+ students enrolled",
-    image: "https://drive.google.com/uc?export=view&id=1Z1Vv6xNO-YWV83fGEzwp5tsXB1urLCnu"
+    image: "https://www.rchitects.ph/__resources/webdata/images/projects_gallery/22_16.jpg"
   },
   {
     name: "DAV Public School",
     location: "Chennai",
     students: "150+ students enrolled",
-    image: "https://drive.google.com/uc?export=view&id=1iBtgBltTMhNhvxPoiKEzOI-AmSQf9Raz"
+    image: "https://th.bing.com/th/id/OIP.fWVZDlrgJStxiCv08-qVQgHaFj?cb=iwc2&w=800&h=600&rs=1&pid=ImgDetMain"
   }
 ];
 
