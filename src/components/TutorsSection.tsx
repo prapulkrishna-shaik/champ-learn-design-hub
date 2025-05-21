@@ -1,38 +1,41 @@
-
 import React from 'react';
 import { BookUser, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import sreeImage from "./sree.jpg";
+import subhaniImage from './SUBHANI.jpg';
+import yaswanthImage from './YASWANTH.jpg';
+import abajithImage from './abajith.jpg';
 
 const tutors = [
   {
-    name: "Radhika Sharma",
+    name: "Sree",
     subjects: "Mathematics",
-    image: "https://drive.google.com/uc?export=view&id=1eUGcOMQp6hUl_LkzSaUGl5WP_JWeAdw8",
+    image: sreeImage,
     bio: "With 8+ years of teaching experience, Radhika makes math approachable through real-world examples and personalized learning plans.",
     philosophy: "Learning happens when students feel safe to make mistakes.",
     rating: 4.9
   },
   {
-    name: "Arjun Patel",
+    name: "Subani",
     subjects: "Science",
-    image: "https://drive.google.com/uc?export=view&id=19Bp26hbTuUrTcTe6Vfe89y_VU06Z_CxK",
-    bio: "Arjun has helped over 200 students master science concepts through hands-on experiments and clear explanations.",
+    image: subhaniImage,
+    bio: "Subhani has helped over 200 students master science concepts through hands-on experiments and clear explanations.",
     philosophy: "Curiosity is the foundation of all scientific discovery.",
     rating: 4.8
   },
   {
-    name: "Priya Verma",
+    name: "Yaswanth",
     subjects: "English & Social Studies",
-    image: "https://drive.google.com/uc?export=view&id=1DelHbpX0nyUw97F2btgou1aiMGIk4fU8",
-    bio: "Priya helps students find their voice through engaging discussions and builds confidence in even the most reluctant learners.",
+    image: yaswanthImage,
+    bio: "Yaswanth helps students find their voice through engaging discussions and builds confidence in even the most reluctant learners.",
     philosophy: "Every student has a unique voice waiting to be discovered.",
     rating: 4.9
   },
   {
-    name: "Vikram Singh",
+    name: "Abajith",
     subjects: "Chemistry & Physics",
-    image: "https://drive.google.com/uc?export=view&id=1Z1Vv6xNO-YWV83fGEzwp5tsXB1urLCnu",
-    bio: "Vikram transforms complex concepts into simple, understandable lessons using visual aids and interactive demonstrations.",
+    image: abajithImage,
+    bio: "Abajith transforms complex concepts into simple, understandable lessons using visual aids and interactive demonstrations.",
     philosophy: "Understanding the 'why' is as important as knowing the 'how'.",
     rating: 4.7
   }
