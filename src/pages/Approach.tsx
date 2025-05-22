@@ -56,7 +56,7 @@ const Approach = () => {
                   </div>
                 </div>
               </div>
-              <div className="rounded-lg overflow-hidden shadow-xl">
+              <div className="rounded-2xl overflow-hidden shadow-xl">
                 <img 
                   src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
                   alt="Personalized tutoring" 
@@ -67,47 +67,50 @@ const Approach = () => {
           </div>
         </section>
         
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-center mb-12">Our Teaching Methodology</h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-gradechamp-softpurple/20 p-3 rounded-full">
-                    <Book className="h-8 w-8 text-gradechamp-blue" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-center text-gradechamp-blue">Learn</h3>
-                <p className="text-gray-700 text-center">
-                  Students engage with concepts through interactive lessons that combine visual, auditory, and kinesthetic learning techniques.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-gradechamp-yellow/20 p-3 rounded-full">
-                    <Users className="h-8 w-8 text-gradechamp-blue" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-center text-gradechamp-blue">Practice</h3>
-                <p className="text-gray-700 text-center">
-                  Guided practice with immediate feedback helps reinforce concepts and build confidence through progressively challenging exercises.
-                </p>
-              </div>
-              <div className="bg-white p-6 rounded-lg shadow-md">
-                <div className="flex justify-center mb-4">
-                  <div className="bg-gradechamp-green/20 p-3 rounded-full">
-                    <FileText className="h-8 w-8 text-gradechamp-blue" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold mb-4 text-center text-gradechamp-blue">Master</h3>
-                <p className="text-gray-700 text-center">
-                  Students demonstrate mastery through assessments, problem-solving challenges, and real-world applications of concepts.
-                </p>
-              </div>
+       <section className="py-16 bg-gray-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 className="text-3xl font-bold text-center mb-12">Our Teaching Methodology</h2>
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {[
+        {
+          title: "Learn",
+          icon: <Book className="h-8 w-8 text-gradechamp-blue" />,
+          bg: "bg-gradechamp-softpurple/20",
+          description:
+            "Students engage with concepts through interactive lessons that combine visual, auditory, and kinesthetic learning techniques.",
+        },
+        {
+          title: "Practice",
+          icon: <Users className="h-8 w-8 text-gradechamp-blue" />,
+          bg: "bg-gradechamp-yellow/20",
+          description:
+            "Guided practice with immediate feedback helps reinforce concepts and build confidence through progressively challenging exercises.",
+        },
+        {
+          title: "Master",
+          icon: <FileText className="h-8 w-8 text-gradechamp-blue" />,
+          bg: "bg-gradechamp-green/20",
+          description:
+            "Students demonstrate mastery through assessments, problem-solving challenges, and real-world applications of concepts.",
+        },
+      ].map((item, idx) => (
+        <div
+          key={idx}
+          className="bg-white p-6 rounded-xl shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl"
+        >
+          <div className="flex justify-center mb-4">
+            <div className={`${item.bg} p-3 rounded-full`}>
+              {item.icon}
             </div>
           </div>
-        </section>
-        
+          <h3 className="text-xl font-bold mb-4 text-center text-gradechamp-blue">{item.title}</h3>
+          <p className="text-gray-700 text-center">{item.description}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+       
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="bg-gradechamp-blue/5 p-8 rounded-xl">
