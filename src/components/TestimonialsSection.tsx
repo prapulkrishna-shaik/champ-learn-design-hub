@@ -6,28 +6,28 @@ const testimonials = [
   {
     name: "Sunita Sharma",
     role: "Parent of 7th Grader",
-    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
+    image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jvvgb1h7fraaj32hdexvtw4e%2F1747901151_img_3.webp?st=2025-05-24T08%3A34%3A19Z&se=2025-05-30T09%3A34%3A19Z&sks=b&skt=2025-05-24T08%3A34%3A19Z&ske=2025-05-30T09%3A34%3A19Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=kbcp55nz3z6iFSziawx4lYwNDwMpTaWdPDBa%2BMYurSY%3D&az=oaivgprodscus",
     quote: "GradeChamp has transformed our evenings from homework battles to productive learning. My son now approaches math with confidence instead of dread.",
     rating: 5
   },
   {
     name: "Rajesh Kumar",
-    role: "Parent of 10th Grader",
-    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
+    role: "Parent of 5th Grader",
+    image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jvrwg16afy0vctyvzhs27sr0%2F1747813170_img_3.webp?st=2025-05-24T09%3A09%3A28Z&se=2025-05-30T10%3A09%3A28Z&sks=b&skt=2025-05-24T09%3A09%3A28Z&ske=2025-05-30T10%3A09%3A28Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=CocTjhYXeRhX5921TL3j44Ouo8%2FTXD%2FldECV8yvZf0w%3D&az=oaivgprodscus",
     quote: "The personal connection my daughter has with her GradeChamp tutor has made all the difference. Her grades have improved, but more importantly, she's excited about learning again.",
     rating: 5
   },
   {
     name: "Ananya Singh",
     role: "8th Grade Student",
-    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
+    image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jvrbjmthfjsrarf6v3y08j00%2F1747795430_img_0.webp?st=2025-05-24T08%3A33%3A13Z&se=2025-05-30T09%3A33%3A13Z&sks=b&skt=2025-05-24T08%3A33%3A13Z&ske=2025-05-30T09%3A33%3A13Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=P1WfWKjIhsCElC%2FvtI6YvDnS6hP1utnxkwaQNiv%2FzSY%3D&az=oaivgprodscus",
     quote: "I used to be too embarrassed to ask questions in class. With GradeChamp, I can ask anything without feeling judged, and now I'm one of the top students in science!",
     rating: 4
   },
   {
     name: "Vikram Malhotra",
-    role: "Parent of 6th Grader",
-    image: "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png",
+    role: "Parent of 3th Grader",
+    image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jv6qvp2sf9rvzdkwqxw0adzn%2F1747204324_img_2.webp?st=2025-05-24T08%3A34%3A22Z&se=2025-05-30T09%3A34%3A22Z&sks=b&skt=2025-05-24T08%3A34%3A22Z&ske=2025-05-30T09%3A34%3A22Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=NiEBBY6ockd3dXkfZt4czQK2amgtabPr%2FDTNRolu5Is%3D&az=oaivgprodscus",
     quote: "The personalized attention at GradeChamp has helped my son develop study habits that will serve him throughout his academic journey. Worth every penny.",
     rating: 5
   }
