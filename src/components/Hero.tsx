@@ -2,6 +2,8 @@
 import React, { useCallback } from 'react';
 import { Button } from "@/components/ui/button";
 import { GraduationCap, Play } from "lucide-react";
+import front from '@/data/front.png';
+import front1 from '@/data/front1.png';
 
 const Hero = React.memo(() => {
   const handleBookClass = useCallback(() => {
@@ -62,7 +64,7 @@ const Hero = React.memo(() => {
             <div className="relative animate-float">
               <div className="bg-white p-3 md:p-5 rounded-2xl shadow-xl rotate-3 z-20 relative">
                 <img 
-                  src="https://videos.openai.com/vg-assets/assets%2Ftask_01jw0t736mer2bp4sd34rvmw31%2F1748079255_img_3.webp?st=2025-05-24T07%3A44%3A01Z&se=2025-05-30T08%3A44%3A01Z&sks=b&skt=2025-05-24T07%3A44%3A01Z&ske=2025-05-30T08%3A44%3A01Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=dO6XOIFWRD2bornpah841AezFh6jOpjuax%2FUqFq03Tg%3D&az=oaivgprodscus" 
+                  src = {front}
                   alt="Student in online class" 
                   className="rounded-xl object-cover w-full h-50"
                   loading="eager"
@@ -71,7 +73,7 @@ const Hero = React.memo(() => {
               
               <div className="absolute top-auto -bottom-12 -right-12 z-10 bg-white p-3 md:p-4 rounded-2xl shadow-lg -rotate-3 animate-float" style={{animationDelay: "0.5s"}}>
                 <img 
-                  src="https://videos.openai.com/vg-assets/assets%2Ftask_01jw0srxrwey99vg8nk8j8610n%2F1748078830_img_3.webp?st=2025-05-24T07%3A39%3A19Z&se=2025-05-30T08%3A39%3A19Z&sks=b&skt=2025-05-24T07%3A39%3A19Z&ske=2025-05-30T08%3A39%3A19Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=DzQLSePJaKkZnLeQHQZmgnFXt8lYYVWL5ysUTUHSdFc%3D&az=oaivgprodscus" 
+                  src= {front1}
                   alt="GradeChamp online learning" 
                   className="rounded-xl object-cover w-80 h-40"
                   loading="eager"
