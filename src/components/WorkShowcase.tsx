@@ -1,5 +1,9 @@
 
 import React, { useCallback } from 'react';
+import advance from '@/data/advanceStudy.png'
+import doubts from '@/data/doubts.png'
+import online from '@/data/onlineStudy.png'
+import one from '@/data/front1.png'
 import {
   Carousel,
   CarouselContent,
@@ -19,22 +23,22 @@ interface Slide {
 
 const slides: Slide[] = [
   {
-    image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jtg50p80ecf9bbvxfkg9f0pm%2F1746446431_img_0.webp?st=2025-05-24T08%3A33%3A15Z&se=2025-05-30T09%3A33%3A15Z&sks=b&skt=2025-05-24T08%3A33%3A15Z&ske=2025-05-30T09%3A33%3A15Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=9Py%2Fv8g7eYmO2VxWcjdJ9erKUPjccKaQpcNX55ydGWg%3D&az=oaivgprodscus",
+    image: one,
     title: "One-on-One Learning",
     description: "Personalized attention tailored to each student's unique learning needs"
   },
   {
-    image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jw0w2gw7f7sv59farbxb60xk%2F1748081209_img_0.webp?st=2025-05-24T08%3A35%3A16Z&se=2025-05-30T09%3A35%3A16Z&sks=b&skt=2025-05-24T08%3A35%3A16Z&ske=2025-05-30T09%3A35%3A16Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=ZpCHkgnU4zzp0BCrLWJlmDCv538Fg2uNZptd9p6puB4%3D&az=oaivgprodscus",
+    image: doubts,
     title: "Interactive Sessions",
     description: "Engaging learning experiences with real-time problem solving"
   },
   {
-    image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jw0w7ywzfakvxxe2g1pmc49x%2F1748081423_img_1.webp?st=2025-05-24T08%3A34%3A29Z&se=2025-05-30T09%3A34%3A29Z&sks=b&skt=2025-05-24T08%3A34%3A29Z&ske=2025-05-30T09%3A34%3A29Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=zQdKGJmW51tRQzqIueB09gMu%2FWf3BjEnqG8hM3YuJa4%3D&az=oaivgprodscus",
+    image: advance,
     title: "Advanced Teaching Methods",
     description: "Using modern pedagogical approaches to enhance understanding"
   },
   {
-    image: "https://videos.openai.com/vg-assets/assets%2Ftask_01jw0vvar7esnr9htd0avc65b1%2F1748080972_img_2.webp?st=2025-05-24T08%3A14%3A28Z&se=2025-05-30T09%3A14%3A28Z&sks=b&skt=2025-05-24T08%3A14%3A28Z&ske=2025-05-30T09%3A14%3A28Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=1lGx%2FcKSh87KRDFgMHcBVQJLbG46T5LKOP3N6ezACGg%3D&az=oaivgprodscus",
+    image: online,
     title: "Focused Environment",
     description: "Creating the perfect setting for academic growth and development"
   }
