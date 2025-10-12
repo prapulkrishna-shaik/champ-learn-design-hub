@@ -32,7 +32,11 @@ const Navbar = () => {
           <div className="flex items-center">
             <Link to="/" className="flex-shrink-0 flex items-center gap-2">
               <img 
+<<<<<<< HEAD
                 src="/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png" 
+=======
+                src="/uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png" 
+>>>>>>> fdda018 (fix(assets): update lovable-uploads -> uploads paths)
                 alt="GradeChamp Logo" 
                 className="h-10 w-auto"
                 loading="eager"
