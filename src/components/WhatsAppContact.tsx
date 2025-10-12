@@ -24,7 +24,11 @@ const WhatsAppContact: React.FC<WhatsAppContactProps> = ({
   };
 
   // The path to the GradeChamp logo
+<<<<<<< HEAD
   const gradechampLogo = "/lovable-uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png";
+=======
+  const gradechampLogo = "/uploads/af53a0ef-4355-40ef-ab74-781f6fa9f1e3.png";
+>>>>>>> fdda018 (fix(assets): update lovable-uploads -> uploads paths)
 
   return (
     <Button
